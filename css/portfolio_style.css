@@ -1,0 +1,215 @@
+body {
+	background-image: url("../assets/images/BG.png");
+	color: green;
+	width: auto;
+	font-family: Courier New;
+}
+
+* {
+	scrollbar-color: green black;
+}
+
+#header {
+	font-family: "Press Start 2P"; 
+	font-size: 60px;
+	background-color: black;
+	padding: 2%;
+	text-align: center;
+}
+
+/*header::before {
+	content: url('../assets/images/logo_alpha.png');
+	max-height: 5px;
+	max-width: 5px;
+	display: inline-block;
+	margin-right: 8px;
+}*/
+
+#header a {
+	color: green;
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: green;
+	background-color: white;
+	cursor: crosshair;
+}
+
+#content {
+	color: black;
+	background-color: black;
+	width: auto;
+	margin: 2.5%;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.top-nav {
+	font-family: "Silkscreen", sans-serif;
+	font-weight: 700;
+	color: green;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	background-color: black;
+	position: sticky;
+	top: 0;
+	padding: 0.5%;
+}
+
+.top-nav a {
+	font-size: 25px;
+	padding: 1%;
+	background-color: green;
+	color: black;
+	text-decoration: none;
+}
+
+.top-nav a:hover {
+	background-color: white;
+	color: green;
+	cursor: crosshair;
+}
+
+#content-flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.aside-nav {
+	min-width: 300px;
+	padding-top: 5%;
+	display: inline-block;
+	vertical-align: top;
+	font-family: Courier;
+	color: green;
+	background-color: black;
+}
+
+.aside-nav a {
+	display: block;
+	font-size: 20px;
+	background-color: green;
+	padding: 5%;
+	color: black;
+	text-decoration: none;
+}
+
+.aside-nav a:hover {
+	background-color: white;
+	color: green;
+	cursor: crosshair;
+}
+
+.aside-nav p {
+	margin: 1em;
+}
+
+.main {
+	font-family: Courier;
+	background-color: black;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 2%;
+}
+
+.main-text {
+	background-color: black;
+	
+	color: green;
+	padding: 3%;
+	font-size: 20px;
+	text-align: justify;
+}
+
+.main a {
+	color: green;
+}
+
+.main a:hover {
+	background-color: white;
+	color: green;
+	cursor: crosshair;
+}
+
+.main span {
+	font-family: "Press Start 2P"; 
+	font-size: 20px;
+	text-align: left;
+}
+
+.main-content {
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	background-color: black;
+	gap: 2em;
+	padding: 3%;
+}
+
+.portfolio-image {
+	max-height: 450px;
+	width: auto;
+}
+
+.portfolio-video {
+	max-height: 450px;
+	width: auto;
+}
+
+.contact-links {
+	background-color: ;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.content-footer {
+	font-family: "Silkscreen", sans-serif;
+	font-weight: 700;
+	color: green;
+	font-size: 25px;
+	padding: 1%;
+	text-align: center;
+}
+
+.content-footer a {
+	color: green;
+	text-decoration: none;
+}
+
+.content-footer a:hover {
+	background-color: white;
+	color: green;
+	cursor: crosshair;
+}
+
+#footer {
+	font-size: 25px;
+	background: black;
+	padding: 1%;
+	text-align: center;
+}
+
+/* fonts */
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
