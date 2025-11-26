@@ -1,5 +1,6 @@
 body {
 	background-image: url("../assets/images/BG.png");
+	background-attachment: fixed;
 	color: green;
 	width: auto;
 	font-family: Courier New;
@@ -76,7 +77,6 @@ body {
 
 #content-flex {
 	display: flex;
-	flex-flow: row wrap;
 }
 
 .aside-nav {
@@ -145,14 +145,14 @@ body {
 	box-sizing: border-box;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-around;
 	background-color: black;
 	gap: 2em;
 	padding: 3%;
 }
 
 .portfolio-image {
-	max-height: 450px;
+	max-height: 400px;
 	width: auto;
 }
 
@@ -162,7 +162,6 @@ body {
 }
 
 .contact-links {
-	background-color: ;
 	text-align: center;
 	padding-bottom: 1em;
 }
