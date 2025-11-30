@@ -1,0 +1,42 @@
+.gallery {
+	columns: 3;
+	gap: 20px;
+}
+
+/* test */
+
+.gallery img {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.gallery .item {
+	font-size: 11pt;
+	text-align: left;
+	line-height: 1em;
+	break-inside: avoid;
+}
+
+.gallery .item img {
+	width: 100%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+	.gallery {
+		columns: 3;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.gallery {
+		columns: 2;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.gallery {
+		columns: 1;
+	}
+}
