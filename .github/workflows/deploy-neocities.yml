@@ -2,8 +2,7 @@ name: Deploy to neocities
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 env:
   FORCE_COLOR: 1
@@ -16,16 +15,18 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/jekyll-build-pages@v1
-      with:
-        source: ./public
+      - uses: actions/checkout@v3
+    
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./public
+          destination: ./_site
 
-    - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities
-      with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: true
-        dist_dir: "public"
-        neocities_supporter: true
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: "_site"
+          neocities_supporter: true
