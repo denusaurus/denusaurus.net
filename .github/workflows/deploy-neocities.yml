@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v6
+      uses: bcomnes/deploy-to-neocities
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
