@@ -23,7 +23,7 @@ jobs:
         run: touch public/.nojekyll
 
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities
+        uses: bcomnes/deploy-to-neocities@v3
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: true
