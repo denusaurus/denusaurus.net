@@ -18,13 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v6
-    - name: use Node.js 
-      uses: actions/setup-node@v6
+    - uses: actions/jekyll-build-pages@v1
       with:
-        node-version: ${{ env.node_version }}
-    - run: npm i
-    - run: npm run build
+        source: ./denusaurus.net
 
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities
