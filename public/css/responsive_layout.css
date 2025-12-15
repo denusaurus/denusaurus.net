@@ -1,0 +1,147 @@
+@media screen and (max-width: 525px) {
+	#header {
+		height: auto;
+		flex-flow: column;
+		align-items: stretch;
+		justify-content: center;
+	}
+	#header .name {
+		padding: 15px 0;
+		margin-left: 4%;
+	}
+	a.header { 
+	font-size: 8vw;
+	}
+	.top-nav {
+		padding: 0;
+		margin: 0;
+	}
+	.top-nav a {
+		display: none;
+	}
+	.top-nav .icon {
+		float: right;
+		display: block;
+		color: green;
+		background-color: black;
+	}
+	.top-nav .icon:hover {
+		color: white;
+		background-color: black;
+	}
+	.top-nav-responsive {
+		display: flex;
+		flex-flow: column wrap;
+		background-color: black;
+		text-align: right;
+		position: sticky;
+		top: 0px;
+	}
+	.top-nav-responsive .icon {
+		background-color: green;
+		color: black;
+	}
+	.top-nav-responsive a {
+		font-family: "Silkscreen", sans-serif;
+		font-weight: 700;
+		font-size:  20px;
+		padding: 10px;
+		color: green;
+		text-decoration: none;
+	}
+	.top-nav-responsive a:hover {
+		cursor: crosshair;
+		color: white;
+	}
+	#content {
+		margin: 4%;
+	}
+	.aside-nav {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+		background-color: green;
+	}
+	.aside-nav a, p {
+		display: none;
+	}
+	.aside-nav .icon {
+		display: flex;
+		font-family: "Silkscreen", sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		padding: 10px;
+	}
+	.aside-nav .icon:hover {
+		color: white;
+		background-color: green;
+	}
+	.aside-nav-responsive {
+		display: flex;
+		flex-flow: column wrap;
+		background-color: black;
+		text-align: center;
+	}
+	.aside-nav-responsive .icon {
+		display: flex;
+		justify-content: flex-end;
+		color: black;
+		background-color: green;
+		font-family: "Silkscreen", sans-serif;
+		font-weight: 700;
+		font-size:  20px;
+		padding: 10px;
+	}
+	.aside-nav-responsive a {
+		font-family: 'Courier New', Courier, monospace;
+		color: green;
+		padding: 10px;
+		text-decoration: none;
+	}
+	.aside-nav-responsive a:hover {
+		cursor: crosshair;
+		color: white;
+	}
+	.main {
+		padding: 4%;
+		height: auto;
+	}
+	.main span {
+		font-size: 10px;
+		margin-bottom: 4%;
+	}
+	.main article {
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 4%;
+	}
+	.main-content {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		margin-bottom: 4%;
+	}
+	.content-footer {
+		font-size: 20px;
+		padding: 0;
+	}
+	#footer {
+		font-size: 16px;
+		margin: 4%;
+		padding: 0.5em;
+	}
+}
+
+@media screen and (max-width: 1010px) {
+	#header {
+		display: block;
+		height: auto;
+	}
+	a.header {
+		font-size: 8vw;
+	}
+	#content-flex {
+		flex-direction: column;
+	}
+}

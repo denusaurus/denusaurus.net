@@ -23,6 +23,20 @@
 	margin-top: 1em;
 }
 
+.toggle-nav {
+	display: inline;
+}
+
+.toggle-nav a {
+	display: inline-block;
+	background: rgba(0, 128, 0);
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+	margin: 2px;
+	border-radius: 5px;
+}
+
 @media screen and (max-width: 1200px) {
 	.gallery {
 		columns: 3;

@@ -1,80 +1,95 @@
+/* all */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+	scrollbar-color: green black;
+}
+
 body {
 	background-image: url("../assets/images/BG.png");
 	background-attachment: fixed;
-	color: green;
-	width: auto;
-	font-family: Courier New;
+	max-width: 100vw;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: 'Courier New', Courier, monospace;
 }
 
-* {
-	scrollbar-color: green black;
-	max-width: 100%;
+html {
+	scroll-behavior: smooth;
 }
+
+/* header */
 
 #header {
-	font-family: "Press Start 2P"; 
-	font-size: 60px;
-	background-color: black;
-	padding: 2%;
-	text-align: center;
-	margin: 2.5%;
+	width: 100vw;
+	height: auto;
 }
 
-/*header::before {
-	content: url('../assets/images/logo_alpha.png');
-	max-height: 5px;
-	max-width: 5px;
-	display: inline-block;
-	margin-right: 8px;
-}*/
+#header .name {
+	position: relative;
+	margin-left: 2.5%;
+}
 
-#header a {
+a.header {
+	font-family: "Press Start 2P"; 
+	font-size: 60pt;
+	text-align: center;
 	color: green;
 	text-decoration: none;
 }
 
-#header a:hover {
-	color: green;
-	background-color: white;
+a.header:hover {
+	color: white;
 	cursor: crosshair;
 }
 
-#content {
-	color: black;
-	background-color: black;
-	width: auto;
-	margin: 2.5%;
-	display: flex;
-	flex-flow: column wrap;
-}
+/* nav */
 
 .top-nav {
-	font-family: "Silkscreen", sans-serif;
-	font-weight: 700;
-	color: green;
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
 	background-color: black;
+	padding: 1em 4.5% 1em 0;
+	margin: 0 0 2.5%;
+	justify-content: flex-end;
+	gap: 50px;
 	position: sticky;
-	top: 0;
-	padding: 0.5%;
+	top: 0px;
+	overflow: hidden;
 }
 
 .top-nav a {
-	font-size: 25px;
-	padding: 1%;
-	background-color: green;
+	display: inline-block;
+	justify-content: space-evenly;
+	align-content: center;
+	text-align: center;
+	font-family: "Silkscreen", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	padding: 10px;
 	color: black;
 	text-decoration: none;
+	background-color: green;
 }
 
 .top-nav a:hover {
-	background-color: white;
-	color: green;
 	cursor: crosshair;
+	color: green;
+	background-color: white;
+}
+
+.top-nav .icon {
+	display: none;
+}
+
+/* content */
+
+#content {
+	margin: 2.5%;
+	margin-top: 0;
+	background-color: black;
 }
 
 #content-flex {
@@ -82,13 +97,20 @@ body {
 }
 
 .aside-nav {
-	min-width: 300px;
-	padding-top: ;
+	min-width: 400px;
 	display: inline-block;
 	vertical-align: top;
-	font-family: Courier;
+	font-family: 'Courier New', Courier, monospace;
 	color: green;
 	background-color: black;
+}
+
+.aside-nav .icon {
+	display: none;
+}
+
+.aside-nav b {
+	display: none;
 }
 
 .aside-nav a {
@@ -111,11 +133,9 @@ body {
 }
 
 .main {
-	font-family: Courier;
-	background-color: black;
 	display: flex;
 	flex-flow: column wrap;
-	padding: 3%;
+	padding: 0 2%;
 	color: green;
 	font-size: 20px;
 	text-align: justify;
@@ -131,33 +151,21 @@ body {
 	font-size: 16px;
 }
 
-.toggle-nav {
-	display: inline;
-}
-
-.toggle-nav a {
-	display: inline-block;
-	background: rgba(0, 128, 0);
-	color: white;
-	text-decoration: none;
-	padding: 2px;
-	margin: 2px;
-	border-radius: 5px;
-}
-
 .main span {
 	font-family: "Press Start 2P"; 
 	font-size: 20px;
 	text-align: left;
+	margin: 2% 0;
 }
 
 .main article {
-	margin: 2em 0;
+	margin-bottom: 2%;
 }
 
 .main article a {
 	color: green;
-	text-decoration: none;
+	text-decoration-color: white;
+	text-underline-offset: 3px;
 }
 
 .main article a:hover {
@@ -172,18 +180,12 @@ body {
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-content: space-around;
-	background-color: black;
 	gap: 2em;
 	color: green;
 }
 
 .portfolio-image {
 	max-height: 400px;
-	width: auto;
-}
-
-.portfolio-video {
-	max-height: 450px;
 	width: auto;
 }
 
@@ -213,41 +215,12 @@ body {
 }
 
 #footer {
-	font-size: 25px;
-	background: black;
+	font-size: ;
+	color: green;
+	background-color: black;
 	padding: 1%;
 	text-align: center;
 	margin: 2.5%;
-}
-
-/*responsive layout*/
-
-@media screen and (max-width: 1000px) {
-	#header {
-		font-size: 30pt;
-	}
-	.top-nav {
-		display: block;
-		padding: 6%;
-	}
-	.top-nav-button {
-		padding: 10px;
-	}
-	.aside-nav {
-		display: none;
-	}
-	.main {
-		padding: 0 6%;
-	}
-	.main span {
-		font-size: 16px;
-	}
-	.main article {
-		margin: 1em 0;
-	}
-	.main-content {
-
-	}
 }
 
 /* fonts */
@@ -268,4 +241,8 @@ body {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+h1 {
+	margin: 0;
 }

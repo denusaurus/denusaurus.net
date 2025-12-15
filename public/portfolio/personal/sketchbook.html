@@ -4,15 +4,14 @@
 <head>
 	<title>portfolio | denusaurus</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src=""></script>
-	<link href="../../css/portfolio.css" rel="stylesheet" type="text/css" media="all">
-	<link href="../../css/gallery.css" rel="stylesheet" type="text/css" media="all">
-	<link rel="icon" type="image/x-icon" href="../../assets/images/logo_alpha.png">
+	<link rel="icon" type="image/x-icon" href="../assets/images/logo_alpha.png">
 	<meta charset="UTF-8">
+	<!--css-->
+	<link href="../../css/portfolio.css" rel="stylesheet" media="all">
+	<link href="../../css/gallery.css" rel="stylesheet" media="all">
+	<link href="../../css/responsive_layout.css" rel="stylesheet" media="all">
 	<!--scripts-->
-	<script type="text/javascript" src="app.js" defer></script>
-	<script src="lightbox.js"></script>
-	<script src="jquery-3.7.1.min.js"></script>
+	<script defer src="../../js/script.js"></script>
 	<!--meta tags-->
 	<meta name="description" content="A selection of my best works">
 	<meta name="keywords" content="denusaurus, portfolio">
@@ -22,36 +21,39 @@
 	<!--fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href=		"https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	
 	<header id="header">
-		<a href="../../index.html">DENUSAURUS</a>
+		
+			<div class="name">
+				<a class="header" href="../../index.html">DENUSAURUS</a>
+			</div>
+	
 	</header>
   
+	<nav id="top_nav">
+		<a href="../index.html">Projects</a>
+		<a href="index.html">Personal</a>
+		<a href="../about/index.html">About me</a>
+		<a href="../contact/index.html">Contact</a>
+	</nav>
+
 	<div id="content">
-	
-		<nav class="top-nav">
-			<a href="../index.html">Projects</a>
-			<a href="index.html">Personal</a>
-			<a href="../about me/index.html">About me</a>
-			<a href="../contact/index.html">Contact</a>
-		</nav>
-	
-		<div id="content-flex">
-			<aside class="aside-nav-container">
+
+		<div id="content_flex">
+			<aside id="aside">
 				<nav class="aside-nav">
-					<h3><a href="index.html">Digital work</a></h3>
+					<a href="index.html"><b>Digital work</b></a>
 					<p>#illustration #digital #procreate</p>
-					<h3><a href="sketchbook.html">Sketchbook</a></h3>
+					<a href="sketchbook.html"><b>Sketchbook</b></a>
 					<p>#traditional</p>
-					<h3><a href="life drawing.html">Life drawing</a></h3>
+					<a href="life drawing.html"><b>Life drawing</b></a>
 					<p>#traditional #digital #school</p>
-					<h3><a href="photography.html">Photography</a></h3>
+					<a href="photography.html"><b>Photography</b></a>
 					<p>#photography</p>
-					<h3></h3>
 				</nav>
 			</aside>
   
@@ -97,7 +99,12 @@
 	</div>
 	
 	<footer id="footer">
-		<span>c denusaurus</span>
+		<p>
+		(c) denusaurus<br>
+		hosted on <a href="https://neocities.org/">neocities</a>
+		</p>
+		<div class="footer-socials">
+		</div>
 	</footer>
   
 </body>

@@ -2,18 +2,18 @@
 <html lang="en" dir="ltr">
 
 <head>
-	<title>contact | denusaurus</title>
+	<title>portfolio | denusaurus</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src=""></script>
-	<link href="../../css/portfolio.css" rel="stylesheet" type="text/css" media="all">
-	<link rel="icon" type="image/x-icon" href="../../assets/images/logo_alpha.png">
+	<link rel="icon" type="image/x-icon" href="../assets/images/logo_alpha.png">
 	<meta charset="UTF-8">
+	<!--css-->
+	<link href="../../css/portfolio.css" rel="stylesheet" media="all">
+	<link href="../../css/gallery.css" rel="stylesheet" media="all">
+	<link href="../../css/responsive_layout.css" rel="stylesheet" media="all">
 	<!--scripts-->
-	<script type="text/javascript" src="app.js" defer></script>
-	<script src="lightbox.js"></script>
-	<script src="jquery-3.7.1.min.js"></script>
+	<script defer src="../../js/script.js"></script>
 	<!--meta tags-->
-	<meta name="description" content="Get in touch!">
+	<meta name="description" content="A selection of my best works">
 	<meta name="keywords" content="denusaurus, portfolio">
 	<meta name="author" content="denusaurus">
 	<!--style ids-->
@@ -27,56 +27,50 @@
 <body>
 	
 	<header id="header">
-		<a href="../../index.html">DENUSAURUS</a>
+		
+			<div class="name">
+				<a class="header" href="../../index.html">DENUSAURUS</a>
+			</div>
+	
 	</header>
   
+	<nav id="top-nav" class="top-nav">
+		<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">Menu</a>
+		<a href="../index.html">Projects</a>
+		<a href="index.html">Personal</a>
+		<a href="../about/index.html">About me</a>
+		<a href="../contact/index.html">Contact</a>
+	</nav>
+
 	<div id="content">
-	
-		<nav class="top-nav">
-			<a href="../index.html">Projects</a>
-			<a href="../personal/index.html">Personal</a>
-			<a href="../about me/index.html">About me</a>
-			<a href="index.html">Contact</a>
-		</nav>
-	
-		<div id="content-flex">
-			<aside class="aside-nav-container">
-				<nav class="aside-nav">
-					<h3><a href="#">Portfolio (2025)</a></h3>
-					<p>> Download my portfolio</p>
-					<h3><a href="#">Showreel (2025)</a></h3>
-					<p>> Check out my showreel</p>
-					<h3><a href="#">CV (2025)</a></h3>
-					<p>> Download my CV</p>
-					<h3></h3>
+
+		<div id="content_flex">
+			<aside class="aside">
+				<nav id="aside-nav" class="aside-nav">
+					<a href="javascript:void(0);" class="icon" onclick="responsiveSideNav()">Contact</a>
 				</nav>
 			</aside>
   
 			<main class="main">
-				<div class="main-text">
-					<span><h1>Let's get in touch!</h1></span>
-					<article>
-						<p>Unfortunately, my schedule is booked with <a href="#">a part-time illustration job</a> until December 2027, and I'm developing some personal projects on the side. But if you have a part-time and/or short-term gig you'd like to have me help out with, I'm always available for that!</p>
-						<p>You can reach me on my email that I open and reply on the next business day or on my phone number during working hours (Mon-Fri 9-5):</p>
-					</article>
-					<article class="small contact">
-						<h2>Contact:</h2>
-						<a href="#">pardinasdaniela@gmail.com</a><br>
-						<a href="#">+421 917 666 741</a>
-					</article>
-					<article>
-						<p>I try to avoid social media, but you can still check them out and if you leave a message or comment, I'll be sure to reply! (In a couple business days...)</p>
-					</article>
-					<article class="small contact">
-						<h2>Social media:</h2>
-						<a href="#">Instagram</a><br>
-						<a href="#">YouTube</a><br>
-						<a href="#">LinkedIn</a>
-					</article>
-				</div>
-				<div class="main-content">
-					
-				</div>
+				<span><h1>Let's get in touch!</h1></span>
+				<article>
+					<p>Unfortunately, my schedule is booked with <a href="#">a part-time illustration job</a> until December 2027, and I'm developing some personal projects on the side. But if you have a part-time and/or short-term gig you'd like to have me help out with, I'm always available for that!</p>
+					<p>You can reach me on my email that I open and reply on the next business day or on my phone number during working hours (Mon-Fri 9-5):</p>
+				</article>
+				<article class="small contact">
+					<h2>Contact:</h2>
+					<a href="#">pardinasdaniela@gmail.com</a><br>
+					<a href="#">+421 917 666 741</a>
+				</article>
+				<article>
+					<p>I try to avoid social media, but you can still check them out and if you leave a message or comment, I'll be sure to reply! (In a couple business days...)</p>
+				</article>
+				<article class="small contact">
+					<h2>Social media:</h2>
+					<a href="#">Instagram</a><br>
+					<a href="#">YouTube</a><br>
+					<a href="#">LinkedIn</a>
+				</article>
 			</main>
 		</div>
 		
@@ -87,7 +81,12 @@
 	</div>
 	
 	<footer id="footer">
-		<span>c denusaurus</span>
+		<p>
+		(c) denusaurus<br>
+		hosted on <a href="https://neocities.org/">neocities</a>
+		</p>
+		<div class="footer-socials">
+		</div>
 	</footer>
   
 </body>

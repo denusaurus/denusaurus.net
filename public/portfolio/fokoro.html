@@ -4,14 +4,13 @@
 <head>
 	<title>portfolio | denusaurus</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src=""></script>
-	<link href="../css/portfolio.css" rel="stylesheet" type="text/css" media="all">
 	<link rel="icon" type="image/x-icon" href="../assets/images/logo_alpha.png">
 	<meta charset="UTF-8">
+	<!--css-->
+	<link href="../css/portfolio.css" rel="stylesheet" media="all">
+	<link href="../css/responsive_layout.css" rel="stylesheet" media="all">
 	<!--scripts-->
-	<script type="text/javascript" src="app.js" defer></script>
-	<script src="lightbox.js"></script>
-	<script src="jquery-3.7.1.min.js"></script>
+	<script defer src="../js/script.js"></script>
 	<!--meta tags-->
 	<meta name="description" content="A selection of my best works">
 	<meta name="keywords" content="denusaurus, portfolio">
@@ -27,47 +26,46 @@
 <body>
 	
 	<header id="header">
-		<a href="../index.html">DENUSAURUS</a>
+		
+			<div class="name">
+				<a class="header" href="../index.html">DENUSAURUS</a>
+			</div>
+	
 	</header>
   
+	<nav id="top-nav" class="top-nav">
+		<a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">Menu</a>
+		<a href="index.html">Projects</a>
+		<a href="personal/index.html">Personal</a>
+		<a href="about/index.html">About me</a>
+		<a href="contact/index.html">Contact</a>
+	</nav>
+
 	<div id="content">
-		
-		<nav class="top-nav">
-			<a href="index.html">Projects</a>
-			<a href="personal/index.html">Personal</a>
-			<a href="about me/index.html">About me</a>
-			<a href="contact/index.html">Contact</a>
-		</nav>
-	
-		<div id="content-flex">
-			<aside class="aside-nav-container">
-				<nav class="aside-nav">
-					<h3><a href="index.html">Die Schule der magischen Tiere</a></h3>
+
+		<div id="content_flex">
+			<aside id="aside">
+				<nav id="aside-nav" class="aside-nav">
+					<a href="javascript:void(0);" class="icon" onclick="responsiveSideNav()">Projects</a>
+					<a href="index.html"><b>Die Schule der magischen Tiere</b></a>
 					<p>#illustration</p>
-					<h3><a href="titk.html">Tender is the Knight</a></h3>
+					<a href="titk.html"><b>Tender is the Knight</b></a>
 					<p>#bachelorfilm #school #characterdesign #animation</p>
-					<h3><a href="robo-legends.html">Robo Legends</a></h3>
+					<a href="robo-legends.html"><b>Robo Legends</b></a>
 					<p>#school #characterdesign #animation #videogame</p>
-					<h3><a href="fokoro.html">Fokoro</a></h3>
+					<a href="fokoro.html"><b>Fokoro</b></a>
 					<p>#school #animation #videogame</p>
-					<h3></h3>
 				</nav>
 			</aside>
   
 			<main class="main">
-				<div class="main-text">
-					<span><h1>Fokoro</h1></span>
-					<article>
+				<span><h1>Fokoro</h1></span>
+				<article>
 					Character animation for an ongoing school project <a href="https://www.behance.net/gallery/96297099/FOKORO-(The-Owl)-Video-game#" class="link-outside" target="_blank">"Fokoro"</a>. It's an open-ended video game collaboration between university lecturer Javad Khajavi and his students, that serves as an exercise for volunteer students, who can contribute to the video game concept in any discipline they wish to explore. The game is a 2D action-adventure platformer, inspired by Japanese culture. aesthetics and folkore and is set in a forest full of mythical creatures that help or hinder the main character, who can shapeshift into an owl. For my own contribution, I wished to explore the character animation for this type of video game and provided the first concepts for the various stages of the main characters movement patterns (idle, run, jump, sit, attacks).
-					</article>
-				</div>
+				</article>
 				<div class="main-content">
 					<article>
-						<iframe width="854" height="480" src="https://www.youtube.com/embed/njzaP0SyoH8?si=HbZkPCbw3doYu-0O?loop=1&amp;controls=0;showinfo=0&amp;autoplay=1" title="demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					</article>
-					<article>
-						<img src="../assets/videos/portfolio/fokoro/idle.gif" class="portfolio-image">
-						<img src="../assets/videos/portfolio/fokoro/sneak.gif" class="portfolio-image">
+						
 					</article>
 				</div>
 			</main>
@@ -76,11 +74,16 @@
 		<div class="content-footer">
 			<span><a href="#header">Back to top</a></span>
 		</div>
-		
+	
 	</div>
 	
 	<footer id="footer">
-		<span>c denusaurus</span>
+		<p>
+		(c) denusaurus<br>
+		hosted on <a href="https://neocities.org/">neocities</a>
+		</p>
+		<div class="footer-socials">
+		</div>
 	</footer>
   
 </body>
