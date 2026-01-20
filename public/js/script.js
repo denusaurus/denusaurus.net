@@ -48,6 +48,15 @@ function closeTitk() {
   );
 }
 
+const start = document.getElementById("start-content")
+
+function toggleStart() {
+  if (start.className == "closed")
+      start.className = "open";
+  else
+      start.className = "closed";
+}
+
 // drag
 
 // bring to top
