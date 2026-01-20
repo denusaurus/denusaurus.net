@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("../assets/images/Bliss.png");
+	background-size: 100vw 100vh;
+    background-attachment: fixed;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main {
+    height: 100vw;
+}
+
+.desktop-icons {
+    display: flex;
+    flex-flow: column wrap;
+    align-items:  flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.desktop-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.desktop-icons img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.desktop-icons p {
+    color: black;
+    font-family: 'Tahoma';
+    font-size: 10pt;
+    max-width: 50px;
+    max-height: 2rem;
+    overflow: hidden;
+}
+
+.closing {
+    opacity: 0;
+    transition: opacity 100ms;
+}
+
+.opening {
+    opacity: 1;
+    transition: opacity 100ms;
+}
+
+.closed {
+    display: none;
+}
+
+#window {
+    box-sizing: border-box;
+    touch-action: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px outset var(--window-blue-3);
+    width: 1000px;
+    height: 800px;
+    background-color: var(--content-ivory);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    transition: all 500ms;
+}
+
+#window-title-bar {
+    cursor: move;
+    position: sticky;
+    height: 30px;
+    top: 0;
+    padding: 5px 5px 0 20px;
+    background-image: linear-gradient(to bottom, var(--window-blue-1) 0%, var(--window-blue-2) 20%, var(--window-blue-3) 90%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.title-bar-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    top: 35px;
+    padding: 10px;
+    bottom: 0px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 4px inset var(--window-blue-1);
+}
+
+.content .title {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.content .description {
+    font-family: 'Tahoma';
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.portfolio-image {
+    max-height: 500px;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, var(--taskbar-blue-1) 0%, var(--taskbar-blue-2) 20%, var(--taskbar-blue-3) 90%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+}
+
+.start-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#start-menu {
+    display: block;
+}
+
+:root {
+	--lightgrey: rgb(165, 165, 157);
+	--darkgrey: rgb(185, 185, 171);
+    --content-ivory: rgb(230, 234, 216);
+    --taskbar-green-1: rgb(113, 181, 113);
+    --taskbar-green-2: rgb(34, 118, 41);
+    --taskbar-green-3: rgb(71, 172, 71);
+    --taskbar-blue-1: rgb(73, 147, 230);--taskbar-blue-2: rgb(35, 89, 214);
+    --taskbar-blue-3: rgb(38, 97, 222);
+    --window-blue-1: rgb(45, 137, 252);
+    --window-blue-2: rgb(0, 84, 226);
+    --window-blue-3: rgb(3, 107, 254);
+    --icon-red-1: rgb(255, 51, 0);
+    --icon-red-2: rgb(152, 0, 0);
+}
