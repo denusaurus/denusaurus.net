@@ -3,49 +3,21 @@
 const dsdmt = document.getElementById("dsdmt")
 
 function openDsdmt() {
-  dsdmt.className = 'opening';
-  dsdmt.addEventListener(
-    "transitionend",
-    () => {
-      dsdmt.className = 'open';
-    },
-    { once: true}
-  );
+  dsdmt.className = 'open';
 }
 
 function closeDsdmt() {
-  dsdmt.className = 'closing';
-  dsdmt.addEventListener(
-    "transitionend",
-    () => {
-      dsdmt.className = 'closed';
-    },
-    { once: true}
-  );
+  dsdmt.className = 'closed';
 }
 
 const titk = document.getElementById("titk")
 
 function openTitk() {
-  titk.className = 'opening';
-  titk.addEventListener(
-    "transitionend",
-    () => {
-      titk.className = 'open';
-    },
-    { once: true}
-  );
+  titk.className = 'open';
 }
 
 function closeTitk() {
-  titk.className = 'closing';
-  titk.addEventListener(
-    "transitionend",
-    () => {
-      titk.className = 'closed';
-    },
-    { once: true}
-  );
+  titk.className = 'closed';
 }
 
 const start = document.getElementById("start-content")
@@ -58,5 +30,28 @@ function toggleStart() {
 }
 
 // drag
+
+// resize
+
+interact('.resizable')
+  .resizable({
+    edges: { top: true, left: true, bottom: true, right: true },
+    listeners: {
+      move: function (event) {
+        let { x, y } = event.target.dataset
+
+        x = (parseFloat(x) || 0) + event.deltaRect.left
+        y = (parseFloat(y) || 0) + event.deltaRect.top
+
+        Object.assign(event.target.style, {
+          width: `${event.rect.width}px`,
+          height: `${event.rect.height}px`,
+          transform: `translate(${x}px, ${y}px)`
+        })
+
+        Object.assign(event.target.dataset, { x, y })
+      }
+    }
+  })
 
 // bring to top
