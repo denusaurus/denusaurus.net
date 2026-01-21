@@ -1,3 +1,5 @@
+// loading screen
+
 // open & close
 
 const dsdmt = document.getElementById("dsdmt")
@@ -20,22 +22,82 @@ function closeTitk() {
   titk.className = 'closed';
 }
 
-const start = document.getElementById("start-content")
+
+function openAbout() {
+
+}
+
+function closeAbout () {
+
+}
+
+function openCV() {
+  
+}
+
+function closeCV () {
+  
+}
+
+function openContact() {
+  
+}
+
+function closeContact () {
+  
+}
+
+const start = document.getElementById("start-window")
 
 function toggleStart() {
-  if (start.className == "closed")
+  if (start.className == "closed-start")
       start.className = "open";
   else
-      start.className = "closed";
+      start.className = "closed-start";
+}
+
+function leavePortfolio() {
+  location.href = "shutdown.html";
 }
 
 // drag
+
+interact('.draggable')
+  .draggable({
+    allowFrom: '.handle',
+
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+      })
+    ],
+
+    autoScroll: true,
+
+    listeners: {
+      move: dragMoveListener
+    }
+  })
+
+function dragMoveListener (event) {
+  var target = event.target
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
+
+window.dragMoveListener = dragMoveListener
 
 // resize
 
 interact('.resizable')
   .resizable({
-    edges: { top: true, left: true, bottom: true, right: true },
+    edges: { left: true, right: true, bottom: true, top: true },
     listeners: {
       move: function (event) {
         let { x, y } = event.target.dataset
@@ -49,7 +111,7 @@ interact('.resizable')
           transform: `translate(${x}px, ${y}px)`
         })
 
-        Object.assign(event.target.dataset, { x, y })
+        Object.assign(event.target.dataset, { x, y})
       }
     }
   })

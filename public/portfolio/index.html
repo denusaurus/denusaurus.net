@@ -7,7 +7,7 @@
 	<link rel="icon" type="image/x-icon" href="../assets/images/logo_alpha.png">
 	<meta charset="UTF-8">
 	<!--css-->
-	<link href="../css/portfolio2.css" rel="stylesheet" media="all">
+	<link href="../css/portfolio.css" rel="stylesheet" media="all">
 	<link href="../css/responsive_layout.css" rel="stylesheet" media="all">
 	<!--scripts-->
 	<script defer src="../js/script.js"></script>
@@ -46,9 +46,9 @@
 			</button>
 		</div>
 
-		<div id="dsdmt" class="open">
-			<div id="window" class="window-dsdmt resizable">
-				<div id="window-title-bar">
+		<div id="dsdmt" class="closed">
+			<div id="window" class="window-dsdmt draggable resizable">
+				<div id="window-title-bar" class="handle">
 					<div class="title">
 						Die Schule der magischen Tiere
 					</div>
@@ -86,10 +86,10 @@
 		</div>
 
 		<div id="titk" class="closed">
-			<div id="window" class="window-titk resizable">
-				<div id="window-title-bar">
+			<div id="window" class="window-titk draggable resizable">
+				<div id="window-title-bar" class="handle">
 					<div class="title">
-						Die Schule der magischen Tiere
+						Tender is the Knight
 					</div>
 					<div class="title-bar-icons">
 						<button>
@@ -121,22 +121,14 @@
 			</div>
 		</div>
 
-	</main>
-
-    <footer>
-		<div class="start-button">
-        	<button onclick="toggleStart()">
-				<img src="../assets/images/start_button.png">
-			</button>
-		</div>
-		<div id="start-content" class="closed">
+		<div id="start-window" class="open">
 			<div id="start-menu">
 				<div class="start-header">
 					<img src="../assets/images/user_icon.png" class="user-icon"><h1>Daniela Pardiñas</h1>
 				</div>
 				<div class="start-content">
 					<div class="link">
-						<button>
+						<button onclick="openAbout()">
 							<img src="../assets/icons/206.ico" class="link-icon">
 						</button>
 						<div class="link-text">
@@ -145,7 +137,7 @@
 						</div>
 					</div>
 					<div class="link">
-						<button>
+						<button onclick="openCV()">
 							<img src="../assets/icons/796.ico" class="link-icon">
 						</button>
 						<div class="link-text">
@@ -154,7 +146,7 @@
 						</div>
 					</div>
 					<div class="link">
-						<button>
+						<button onclick="openContact()">
 							<img src="../assets/icons/142.ico" class="link-icon">
 						</button>
 						<div class="link-text">
@@ -164,14 +156,66 @@
 					</div>
 				</div>
 				<div class="start-footer">
-					<button>
+					<button onclick="leavePortfolio()">
 						<img src="../assets/icons/241.ico" class="start-footer-icon">
 					</button>
 					<div class="start-footer-text">
 						Home
 					</div>
 				</div>
+			</div>
 		</div>
+
+		<div id="about" class="open">
+			<div id="window-small" class="window-about draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						About me
+					</div>
+					<div class="title-bar-icons">
+						<button>
+							<img src="../assets/images/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeAbout()">
+							<img src="../assets/images/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>About me</h1>
+					</div>
+					<div class="description">
+						<article>
+							Illustrations for the German children's book series <a href="https://www.carlsen.de/die-schule-der-magischen-tiere?srsltid=AfmBOopkGZbKFat8UGZIdKIa7sMluP4vdV7CK-jBStLpD1XvXC9gemZ-" target="_blank">"Die Schule der magischen Tiere"</a>, written by Margit Auer and published by Carlsen. The team behind the redesign is called "die Farbfüchse" and consists of <a href="https://celiakaspar.de/" target="_blank">Celia Kaspar</a>, the team leader and character designer, <a href="https://lucysophiewitthoff.com/" target="_blank">Lucy-Sophie Witthoff</a> and  me. I joined the team in February of 2025 and the project is ongoing as of today.
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cv">
+		</div>
+
+		<div id="contact">
+		</div>
+
+		<div id="clippy">
+			<img src="../assets/images/clippy.webp">
+		</div>
+
+	</main>
+
+    <footer>
+		<div class="start-button">
+        	<button onclick="toggleStart()">
+				<img class="start-button" src="../assets/images/start_button.png">
+			</button>
+		</div>
+		
     </footer>
     
 </body>
