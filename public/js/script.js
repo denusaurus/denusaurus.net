@@ -1,4 +1,38 @@
-// loading screen
+// hightlight folder
+
+const dsdmtF = document.getElementById("dsdmt-folder")
+
+function highlightDsdmt() {
+  if (dsdmtF.className == "unclicked")
+      dsdmtF.className = "clicked";
+  else
+      dsdmtF.className = "unclicked";
+}
+
+window.addEventListener('click', function(e){
+  if (this.document.getElementById("dsdmt-folder").contains(e.target)){
+    dsdmtF.className = "clicked";
+  } else{
+    dsdmtF.className = "unclicked";
+  }
+})
+
+const titkF = document.getElementById("titk-folder")
+
+function highlightTitk() {
+  if (titkF.className == "unclicked")
+      titkF.className = "clicked";
+  else
+      titkF.className = "unclicked";
+}
+
+window.addEventListener('click', function(e){
+  if (this.document.getElementById("titk-folder").contains(e.target)){
+    titkF.className = "clicked";
+  } else{
+    titkF.className = "unclicked";
+  }
+})
 
 // open & close
 
@@ -6,6 +40,7 @@ const dsdmt = document.getElementById("dsdmt")
 
 function openDsdmt() {
   dsdmt.className = 'open';
+  dsdmtF.className = "unclicked";
 }
 
 function closeDsdmt() {
@@ -16,35 +51,41 @@ const titk = document.getElementById("titk")
 
 function openTitk() {
   titk.className = 'open';
+  titkF.className = "unclicked";
 }
 
 function closeTitk() {
   titk.className = 'closed';
 }
 
+const about = document.getElementById("about")
 
 function openAbout() {
-
+  about.className = 'open';
 }
 
 function closeAbout () {
-
+  about.className = 'closed';
 }
 
+const cv = document.getElementById("cv")
+
 function openCV() {
-  
+  cv.className = 'open';
 }
 
 function closeCV () {
-  
+  cv.className = 'closed';
 }
 
+const contact = document.getElementById("contact")
+
 function openContact() {
-  
+  contact.className = 'open';
 }
 
 function closeContact () {
-  
+  contact.className = 'closed';
 }
 
 const start = document.getElementById("start-window")
@@ -72,8 +113,6 @@ interact('.draggable')
         endOnly: true
       })
     ],
-
-    autoScroll: true,
 
     listeners: {
       move: dragMoveListener
@@ -117,3 +156,6 @@ interact('.resizable')
   })
 
 // bring to top
+
+// clippy
+

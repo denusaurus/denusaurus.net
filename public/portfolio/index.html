@@ -28,25 +28,17 @@
 
 	<main>
 		<div class="desktop-icons">
-			<button onclick="openDsdmt()">
+			<button id="dsdmt-folder" onclick="highlightDsdmt()" ondblclick="openDsdmt()" class="unclicked">
 				<img src="../assets/icons/23.ico">
 				<p>Die Schule der magischen Tiere</p>
 			</button>
-			<button onclick="openTitk()">
+			<button id="titk-folder" onclick="highlightTitk()" ondblclick="openTitk()" class="unclicked">
 				<img src="../assets/icons/23.ico">
 				<p>Tender is the Knight</p>
 			</button>
-			<button>
-				<img src="../assets/icons/23.ico">
-				<p>Robo Legends</p>	
-			</button>
-			<button>				
-				<img src="../assets/icons/23.ico">
-				<p>Fokoro</p>
-			</button>
 		</div>
 
-		<div id="dsdmt" class="closed">
+		<div id="dsdmt" class="open">
 			<div id="window" class="window-dsdmt draggable resizable">
 				<div id="window-title-bar" class="handle">
 					<div class="title">
@@ -121,10 +113,11 @@
 			</div>
 		</div>
 
-		<div id="start-window" class="open">
+		<div id="start-window" class="closed-start">
 			<div id="start-menu">
 				<div class="start-header">
-					<img src="../assets/images/user_icon.png" class="user-icon"><h1>Daniela Pardiñas</h1>
+					<img src="../assets/images/user_icon.png" class="user-icon">
+					<h1>Daniela Pardiñas</h1>
 				</div>
 				<div class="start-content">
 					<div class="link">
@@ -190,20 +183,101 @@
 					</div>
 					<div class="description">
 						<article>
-							Illustrations for the German children's book series <a href="https://www.carlsen.de/die-schule-der-magischen-tiere?srsltid=AfmBOopkGZbKFat8UGZIdKIa7sMluP4vdV7CK-jBStLpD1XvXC9gemZ-" target="_blank">"Die Schule der magischen Tiere"</a>, written by Margit Auer and published by Carlsen. The team behind the redesign is called "die Farbfüchse" and consists of <a href="https://celiakaspar.de/" target="_blank">Celia Kaspar</a>, the team leader and character designer, <a href="https://lucysophiewitthoff.com/" target="_blank">Lucy-Sophie Witthoff</a> and  me. I joined the team in February of 2025 and the project is ongoing as of today.
+							Hi! I'm Dani (she/her).
+							<br>I'm a 25 year-old freelancing artist based in Bratislava, Slovakia.
+							<br>
+							<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ut accusamus, quod praesentium placeat iure inventore repellendus odit dolorem molestias aliquid? Architecto est autem itaque illum quod natus, non placeat!
 						</article>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="cv">
+		<div id="cv" class="closed">
+			<div id="window-small" class="window-cv draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						CV
+					</div>
+					<div class="title-bar-icons">
+						<button>
+							<img src="../assets/images/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeCV()">
+							<img src="../assets/images/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>CV</h1>
+					</div>
+					<div class="description">
+						<article>
+							<a href="#">x</a> Scroll down to download my CV & Portfolio:)
+							<br>
+							<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus molestias rem dignissimos cum? Vero reprehenderit hic facilis consequatur maxime sed aperiam repellendus, ipsa quibusdam corrupti illo. Nulla esse quo aliquam.
+						</article>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div id="contact">
+		<div id="contact" class="closed">
+			<div id="window-small" class="window-contact draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						Contact me
+					</div>
+					<div class="title-bar-icons">
+						<button>
+							<img src="../assets/images/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeContact()">
+							<img src="../assets/images/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>Contact me</h1>
+					</div>
+					<div class="description">
+						<article>
+							My work on the <a href="#" onclick="openDsdmt()">book series</a> is scheduled until Christmas 2027, so I won't be able to undertake any full-time jobs until then. But if you would like to have a commission done, or you need part-time help on your project, please don't hesitate to reach out!
+						</article>
+						<div class="contact">
+							You can write me an e-mail at <br>denusaurus@proton.me
+						</div>
+						<div class="contact">
+							You can also DM me on Discord or Signal
+							<br>@dumbassaurus
+							<br>+421917666741
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div id="clippy">
+			<div class="speech-bubble">
+				<article>
+					Looks like you're viewing Dani's portfolio!
+					<br>
+					<br>Would you like help?
+					<ul>
+						<li>Try clicking a desktop folder</li>
+						<li>Try clicking the start menu</li>
+					</ul>
+					<input type="checkbox" name="clippy" value="no"> Don't show me this tip again
+				</article>
+			</div>
 			<img src="../assets/images/clippy.webp">
 		</div>
 

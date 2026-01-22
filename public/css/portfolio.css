@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -17,16 +18,41 @@ main {
 
 button {
     background: none;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
+}
+
+article {
+    text-align: justify;
 }
 
 .desktop-icons {
     display: flex;
     flex-flow: column wrap;
-    align-items:  flex-start;
     padding: 20px;
     gap: 20px;
+}
+
+.desktop-icons button {
+    width: 90px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+.unclicked:hover {
+    border: 1px solid rgb(131, 166, 252);
+    background-color: rgba(183, 211, 252, 0.196);
+}
+
+.clicked {
+    border: 1px solid rgb(131, 166, 252);
+    background-color: rgba(183, 211, 252, 0.518);
+}
+
+.clicked:hover {
+    border: 1px solid rgb(18, 139, 231);
+    background-color: rgb(183, 211, 252);
 }
 
 .desktop-icons img {
@@ -41,6 +67,7 @@ button {
     max-width: 50px;
     max-height: 2rem;
     overflow: hidden;
+    align-self: center;
 }
 
 .open {
@@ -59,10 +86,8 @@ button {
     transition-duration: 200ms;
 }
 
-#dsdmt, #titk {
-    display: grid;
-    place-items: center;
-
+#dsdmt, #titk, #about, #cv, #contact {
+    
 }
 
 #window {
@@ -78,9 +103,7 @@ button {
 
 #window-small {
     box-sizing: border-box;
-	position: fixed;
-	bottom: 0px;
-	left: 500px;
+    position: absolute;
     border: 4px outset var(--window-blue-3);
     width: 500px;
     height: 500px;
@@ -96,7 +119,7 @@ button {
 #window-title-bar {
     cursor: move;
     position: sticky;
-    height: 30px;
+    height: 35px;
     top: 0;
     padding: 5px 5px 0 20px;
     background-image: linear-gradient(to bottom, var(--window-blue-1) 0%, var(--window-blue-2) 20%, var(--window-blue-3) 90%);
@@ -141,12 +164,16 @@ button {
     max-height: 500px;
 }
 
+#start-window {
+    position: fixed;
+    bottom: 39px;
+}
+
 #start-menu {
     background-color: var(--folder-lightblue);
-    position: fixed;
     height: 50vh;
     width: 20vw;
-    border: 4px outset var(--window-blue-3);
+    border: 3px outset var(--window-blue-3);
     border-radius: 15px 15px 0 0;
     display: flex;
     flex-direction: column;
@@ -160,7 +187,7 @@ button {
 }
 
 .start-header {
-    height: 60px;
+    height: 75px;
     padding: 8px;
     border-radius: 10px 10px 0 0;
     background-image: linear-gradient(to bottom, var(--window-blue-1) 0%, var(--window-blue-2) 20%, var(--window-blue-3) 90%);
@@ -219,14 +246,62 @@ button {
 .start-footer-icon {
     height: 40px;
 }
+
+#about, #cv, #contact {
+    display: grid;
+    place-items: center;
+}
+
+.contact {
+    padding: 1em;
+    text-align: center;
+}
+
 #clippy {
     position: fixed;
     bottom: 38px;
     right: 0;
+    padding: 10px;
 }
 
 #clippy img {
     height: 150px;
+}
+
+.speech-bubble {
+	position: fixed;
+    right: 70px;
+    bottom: 220px;
+	background: #ffffca;
+    border: 2px solid black;
+	border-radius: .4em;
+    width: 140px;
+}
+
+.speech-bubble article {
+    font-family: Tahoma;
+    font-size: 10pt;
+    padding: 5px;
+    text-align: left;
+}
+
+.speech-bubble ul {
+    padding: 0.5em 15px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #ffffca;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
 }
 
 footer {
@@ -235,6 +310,12 @@ footer {
     bottom: 0;
     width: 100%;
     height: 38px;
+}
+
+.start-button {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
 
 .shutdown, .loading {
