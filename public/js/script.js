@@ -84,18 +84,14 @@ const bubbleContact = document.getElementById("bubble-contact")
 
 function openContact() {
   contact.className = 'open';
-  bubbleDefault.classList.toggle("open");
-  bubbleDefault.classList.toggle("closed");
-  bubbleContact.classList.toggle("open");
-  bubbleContact.classList.toggle("closed");
+  bubbleDefault.classList.replace("open", "closed");
+  bubbleContact.classList.replace("closed", "open");
 }
 
 function closeContact () {
   contact.className = 'closed';
-  bubbleDefault.classList.toggle("open");
-  bubbleDefault.classList.toggle("closed");
-  bubbleContact.classList.toggle("open");
-  bubbleContact.classList.toggle("closed");
+  bubbleDefault.classList.replace("closed", "open");
+  bubbleContact.classList.replace("open", "closed");
 }
 
 const start = document.getElementById("start-window")
