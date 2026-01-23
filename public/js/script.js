@@ -79,13 +79,23 @@ function closeCV () {
 }
 
 const contact = document.getElementById("contact")
+const bubbleDefault = document.getElementById("bubble-default")
+const bubbleContact = document.getElementById("bubble-contact")
 
 function openContact() {
   contact.className = 'open';
+  bubbleDefault.classList.toggle("open");
+  bubbleDefault.classList.toggle("closed");
+  bubbleContact.classList.toggle("open");
+  bubbleContact.classList.toggle("closed");
 }
 
 function closeContact () {
   contact.className = 'closed';
+  bubbleDefault.classList.toggle("open");
+  bubbleDefault.classList.toggle("closed");
+  bubbleContact.classList.toggle("open");
+  bubbleContact.classList.toggle("closed");
 }
 
 const start = document.getElementById("start-window")
@@ -109,7 +119,7 @@ interact('.draggable')
 
     modifiers: [
       interact.modifiers.restrictRect({
-        restriction: 'parent',
+        restriction: 'main',
         endOnly: true
       })
     ],
@@ -157,5 +167,16 @@ interact('.resizable')
 
 // bring to top
 
-// clippy
+// clippy toggle
 
+function fool() {
+
+var checkedBox = document.getElementById("clippy-checkbox");
+var youFool = document.getElementById("fool");
+
+if (checkedBox.checked == true){
+    youFool.style.display = "block";
+  } else {
+    youFool.style.display = "none";
+  }
+}

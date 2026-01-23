@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url("../assets/images/Bliss.png");
+	background-image: url("../assets/images/portfolio/Bliss.png");
 	background-size: 100vw 100vh;
     background-attachment: fixed;
     overflow-y: hidden;
@@ -86,17 +86,16 @@ article {
     transition-duration: 200ms;
 }
 
-#dsdmt, #titk, #about, #cv, #contact {
-    
-}
-
 #window {
     box-sizing: border-box;
     position: absolute;
+    left: 10%;
+    top: -200px;
+    transform: translate(0px, 0px);
     border: 4px outset var(--window-blue-3);
-    width: 1000px;
+    width: 1140px;
     height: 800px;
-    background-color: var(--content-ivory);
+    background-color: white;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
 }
@@ -104,10 +103,13 @@ article {
 #window-small {
     box-sizing: border-box;
     position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(0px, 0px);
     border: 4px outset var(--window-blue-3);
     width: 500px;
-    height: 500px;
-    background-color: var(--content-ivory);
+    height: 550px;
+    background-color: white;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
 }
@@ -138,30 +140,37 @@ article {
 .content {
     position: absolute;
     top: 35px;
-    padding: 10px;
     bottom: 0px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     border: 4px inset var(--window-blue-1);
+    overflow-x: hidden;
 }
 
 .content .title {
-    color: black;
+    color: var(--taskbar-blue-3);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 14pt;
+    padding: 10px;
 }
 
 .content .description {
     font-family: 'Tahoma';
-    font-weight: bold;
-    font-size: 10pt;
+    font-size: 11pt;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
 }
 
 .portfolio-image {
     max-height: 500px;
+}
+
+.noscroll {
+    overflow-y: hidden;
 }
 
 #start-window {
@@ -252,9 +261,32 @@ article {
     place-items: center;
 }
 
-.contact {
-    padding: 1em;
-    text-align: center;
+.small-box header {
+    background: linear-gradient(90deg, white 75%, var(--box-lightblue) 100%);
+    padding: 10px 0 5px 20px;
+    color: var(--taskbar-blue-2);
+    border-radius: 5px 5px 0 0;
+    font-family: 'Verdana';
+    font-weight: bold;
+}
+
+.small-box article {
+    padding: 10px;
+    background-color: var(--box-lightblue);
+    color: var(--taskbar-blue-1);
+    font-family: 'Tahoma';
+    font-size: 10pt;
+    line-height: 2;
+    text-align: justify;
+}
+
+.small-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.bio {
+    display: flex;
 }
 
 #clippy {
@@ -286,7 +318,19 @@ article {
 }
 
 .speech-bubble ul {
-    padding: 0.5em 15px;
+    padding: 0.5em 20px;
+}
+
+.indented-checkbox {
+    padding: 0.5em 0.5em 0.5em 20px ;
+    display: block;
+    position: relative;
+    margin-top: -1.8em;
+}
+
+#fool {
+    padding: 0.5em 0;
+    font-style: italic;
 }
 
 .speech-bubble:after {
@@ -339,4 +383,6 @@ footer {
     --icon-red-1: rgb(255, 51, 0);
     --icon-red-2: rgb(152, 0, 0);
     --folder-lightblue: rgb(214, 223, 245);
+    --box-lightblue: rgb(210, 236, 255);
+    --box-blue: rgb(102, 123, 216);
 }
