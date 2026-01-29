@@ -34,28 +34,169 @@ window.addEventListener('click', function(e){
   }
 })
 
+const illuF = document.getElementById("illu-folder")
+
+function highlightIllu() {
+  if (illuF.className == "unclicked")
+      illuF.className = "clicked";
+  else
+      illuF.className = "unclicked";
+}
+
+window.addEventListener('click', function(e){
+  if (this.document.getElementById("illu-folder").contains(e.target)){
+    illuF.className = "clicked";
+  } else{
+    illuF.className = "unclicked";
+  }
+})
+
+const sketchbF = document.getElementById("sketchb-folder")
+
+function highlightSketchb() {
+  if (sketchbF.className == "unclicked")
+      sketchbF.className = "clicked";
+  else
+      sketchbF.className = "unclicked";
+}
+
+window.addEventListener('click', function(e){
+  if (this.document.getElementById("sketchb-folder").contains(e.target)){
+    sketchbF.className = "clicked";
+  } else{
+    sketchbF.className = "unclicked";
+  }
+})
+
+const croquisF = document.getElementById("croquis-folder")
+
+function highlightCroquis() {
+  if (croquisF.className == "unclicked")
+      croquisF.className = "clicked";
+  else
+      croquisF.className = "unclicked";
+}
+
+window.addEventListener('click', function(e){
+  if (this.document.getElementById("croquis-folder").contains(e.target)){
+    croquisF.className = "clicked";
+  } else{
+    croquisF.className = "unclicked";
+  }
+})
+
+// tabs
+
+const dsdmtT = document.getElementById("dsdmt-tab")
+
+function minimizeDsdmt() {
+  dsdmt.className = "closed";
+  dsdmtT.style.display = "flex";
+  dsdmtT.classList.remove("pressed");
+}
+
+const titkT = document.getElementById("titk-tab")
+
+function minimizeTitk() {
+  titk.className = "closed";
+  titkT.style.display = "flex";
+  titkT.classList.remove("pressed");
+}
+
+const illuT = document.getElementById("illu-tab")
+
+function minimizeIllu() {
+  illu.className = "closed";
+  illuT.style.display = "flex";
+  illuT.classList.remove("pressed");
+}
+
+const sketchbT = document.getElementById("sketchb-tab")
+
+function minimizeSketchb() {
+  sketchb.className = "closed";
+  sketchbT.style.display = "flex";
+  sketchbT.classList.remove("pressed");
+}
+
+const croquisT = document.getElementById("croquis-tab")
+
+function minimizeCroquis() {
+  croquis.className = "closed";
+  croquisT.style.display = "flex";
+  croquisT.classList.remove("pressed");
+}
+
 // open & close
 
 const dsdmt = document.getElementById("dsdmt")
 
 function openDsdmt() {
-  dsdmt.className = 'open';
+  dsdmt.className = "open";
   dsdmtF.className = "unclicked";
+  dsdmtT.style.display = "flex";
+  dsdmtT.classList.add("pressed");
 }
 
 function closeDsdmt() {
-  dsdmt.className = 'closed';
+  dsdmt.className = "closed";
+  dsdmtT.style.display = "none";
 }
 
 const titk = document.getElementById("titk")
 
 function openTitk() {
-  titk.className = 'open';
+  titk.className = "open";
   titkF.className = "unclicked";
+  titkT.style.display = "flex";
+  titkT.classList.add("pressed");
 }
 
 function closeTitk() {
-  titk.className = 'closed';
+  titk.className = "closed";
+  titkT.style.display = "none";
+}
+
+const sketchb = document.getElementById("sketchbook")
+
+function openSketchb() {
+  sketchb.className = "open";
+  sketchbF.className = "unclicked";
+  sketchbT.style.display = "flex";
+  sketchbT.classList.add("pressed");
+}
+
+function closeSketchb() {
+  sketchb.className = "closed";
+  sketchbT.style.display = "none";
+}
+
+const illu = document.getElementById("illu")
+
+function openIllu() {
+  illu.className = "open";
+  illuF.className = "unclicked";
+  illuT.style.display = "flex";
+  illuT.classList.add("pressed");
+}
+
+function closeIllu() {
+  illu.className = "closed";
+  illuT.style.display = "none";
+}
+
+const croquis = document.getElementById("croquis")
+
+function openCroquis() {
+  croquis.className = "open";
+  croquisF.className = "unclicked";
+  croquisT.style.display = "flex";
+  croquisT.classList.add("pressed");
+}
+
+function closeCroquis() {
+  croquis.className = "closed";
+  croquisT.style.display = "none";
 }
 
 const about = document.getElementById("about")
@@ -169,6 +310,18 @@ function fool() {
 
 var checkedBox = document.getElementById("clippy-checkbox");
 var youFool = document.getElementById("fool");
+
+if (checkedBox.checked == true){
+    youFool.style.display = "block";
+  } else {
+    youFool.style.display = "none";
+  }
+}
+
+function foolContact() {
+
+var checkedBox = document.getElementById("clippy-checkbox-contact");
+var youFool = document.getElementById("fool-contact");
 
 if (checkedBox.checked == true){
     youFool.style.display = "block";

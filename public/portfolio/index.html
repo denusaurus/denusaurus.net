@@ -36,6 +36,18 @@
 				<img src="../assets/icons/23.ico">
 				<p>Tender is the Knight</p>
 			</button>
+			<button id="illu-folder" onclick="highlightIllu()" ondblclick="openIllu()" class="unclicked">
+				<img src="../assets/icons/23.ico">
+				<p>Illustrations</p>
+			</button>
+			<button id="sketchb-folder" onclick="highlightSketchb()" ondblclick="openSketchb()" class="unclicked">
+				<img src="../assets/icons/23.ico">
+				<p>Sketchbook</p>
+			</button>
+			<button id="croquis-folder" onclick="highlightCroquis()" ondblclick="openCroquis()" class="unclicked">
+				<img src="../assets/icons/23.ico">
+				<p>Life Drawing</p>
+			</button>
 		</div>
 
 		<div id="dsdmt" class="closed">
@@ -45,7 +57,7 @@
 						Die Schule der magischen Tiere
 					</div>
 					<div class="title-bar-icons">
-						<button>
+						<button onclick="minimizeDsdmt()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
@@ -84,7 +96,7 @@
 						Tender is the Knight
 					</div>
 					<div class="title-bar-icons">
-						<button>
+						<button onclick="minimizeTitk()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
@@ -125,7 +137,112 @@
 			</div>
 		</div>
 
-		<div id="start-window" class="closed">
+		<div id="illu" class="closed">
+			<div id="window" class="window-illu draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						Illustrations
+					</div>
+					<div class="title-bar-icons">
+						<button onclick="minimizeIllu()">
+							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeIllu()">
+							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>Illustrations</h1>
+					</div>
+					<div class="description">
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
+						</article>
+					</div>
+					<div class="gallery">
+						<img src="../assets/images/portfolio/digital/Lamine.png" class="portfolio-image">
+						<img src="../assets/images/portfolio/digital/Oolong.png" class="portfolio-image">
+					</div>	
+				</div>
+			</div>
+		</div>
+
+		<div id="sketchbook" class="closed">
+			<div id="window" class="window-illu draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						Sketchbook
+					</div>
+					<div class="title-bar-icons">
+						<button onclick="minimizeSketchb()">
+							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeSketchb()">
+							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>Sketchbook</h1>
+					</div>
+					<div class="description">
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
+						</article>
+					</div>
+					<div class="gallery">
+						<img src="../assets/images/portfolio/sketchbook/Rôzne.jpg" class="portfolio-image">
+					</div>	
+				</div>
+			</div>
+		</div>
+
+		<div id="croquis" class="closed">
+			<div id="window" class="window-illu draggable resizable">
+				<div id="window-title-bar" class="handle">
+					<div class="title">
+						Life Drawing
+					</div>
+					<div class="title-bar-icons">
+						<button onclick="minimizeCroquis()">
+							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
+						</button>
+						<button>
+							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
+						</button>
+						<button onclick="closeCroquis()">
+							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
+						</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">
+						<h1>Life Drawing</h1>
+					</div>
+					<div class="description">
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
+						</article>
+					</div>
+					<div class="gallery">
+						<img src="../assets/images/portfolio/croquis/7.png" class="portfolio-image">
+						<img src="../assets/images/portfolio/croquis/6.png" class="portfolio-image">
+						<img src="../assets/images/portfolio/croquis/3.png" class="portfolio-image">
+					</div>	
+				</div>
+			</div>
+		</div>
+
+		<div id="start-window" class="closed-start">
 			<div id="start-menu">
 				<div class="start-header">
 					<img src="../assets/images/portfolio/user_icon.png" class="user-icon">
@@ -389,9 +506,9 @@
 					<ul>
 						<li>Try clicking a contact link</li>
 					</ul>
-					<input type="checkbox" id="clippy-checkbox" onclick="fool()"/>
+					<input type="checkbox" id="clippy-checkbox-contact" onclick="foolContact()"/>
 					Don't show me this tip again
-					<p id="fool" style="display: none;">You fool.</p>
+					<p id="fool-contact" style="display: none;">You fool.</p>
 				</article>
 			</div>
 			<img src="../assets/images/portfolio/clippy.webp">
@@ -405,7 +522,23 @@
 				<img class="start-button" src="../assets/images/portfolio/start_button.png">
 			</button>
 		</div>
-		
+		<div class="taskbar">
+			<button onclick="openDsdmt()" id="dsdmt-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Die Schule der magischen Tiere
+			</button>
+			<button onclick="openTitk()" id="titk-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Tender is the Knight
+			</button>
+			<button onclick="openIllu()" id="illu-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Illustration
+			</button>
+			<button onclick="openSketchb()" id="sketchb-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Sketchbook
+			</button>
+			<button onclick="openCroquis()" id="croquis-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Life Drawing
+			</button>
+		</div>
     </footer>
     
 </body>
