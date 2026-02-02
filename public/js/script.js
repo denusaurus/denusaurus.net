@@ -1,3 +1,30 @@
+// fancybox
+
+Fancybox.bind("[data-fancybox]", {
+  theme: "auto",
+  Carousel: {
+    Toolbar: {
+      display: {
+        left: ["counter"],
+        middle: [
+          "zoomIn",
+          "zoomOut",
+          "toggle1to1",
+          "rotateCCW",
+          "rotateCW",
+          "flipX",
+          "flipY",
+          "reset",
+        ],
+        right: ["autoplay", "thumbs", "close"],
+      },
+    },
+    Thumbs: {
+      type: "classic",
+    },
+  },
+});
+
 // hightlight folder
 
 const dsdmtF = document.getElementById("dsdmt-folder")
@@ -275,6 +302,7 @@ function dragMoveListener (event) {
 
   target.setAttribute('data-x', x)
   target.setAttribute('data-y', y)
+  target.classList.remove("fullscreen")
 }
 
 window.dragMoveListener = dragMoveListener
