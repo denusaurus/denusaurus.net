@@ -168,6 +168,15 @@ article {
     font-size: 14pt;
 }
 
+.content span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    padding: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--taskbar-blue-2);
+}
+
 .content .description {
     font-family: 'Tahoma';
     font-size: 11pt;
@@ -179,6 +188,27 @@ article {
     border: 2px outset var(--content-ivory);
     display: flex;
     flex-flow: column wrap;
+}
+
+.content-images {
+    display: flex;
+}
+
+.sidebar {
+    background: linear-gradient( rgb(122, 161, 231) 0%, rgb(99, 117, 215) 100%);
+    min-width: 200px;
+}
+
+.sidebar button {
+    background: linear-gradient(90deg, white 75%, var(--box-lightblue) 100%);
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
 }
 
 .gallery {
@@ -205,7 +235,7 @@ article {
 
 .portfolio-image img {
     width: 100%;
-    height: 100%;
+    max-height: 290px;
     object-fit: contain;
 }
 

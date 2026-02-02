@@ -275,6 +275,19 @@ function leavePortfolio() {
   location.href = "shutdown.html";
 }
 
+// gallery categories
+
+const galleryA = document.getElementById("gallery-a")
+const galleryB = document.getElementById("gallery-b")
+
+function toggleA() {
+  if (galleryA.style.display = "none")
+      galleryA.style.display = "flex";
+      galleryB.style.display = "none";
+  else
+      galleryA.style.display = "none";
+}
+
 // drag
 
 interact('.draggable')
