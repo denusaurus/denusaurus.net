@@ -1,3 +1,6 @@
+function openPortfolio() {
+  location.href = "portfolio/loading.html";
+}
 // fancybox
 
 Fancybox.bind("[data-fancybox]", {

@@ -1,156 +1,73 @@
 body {
-	background-image: url("../assets/images/BG.png");
-	color: green;
-	width: auto;
-	font-family: Courier New;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: pink;
 }
 
-* {
-	scrollbar-color: green black;
+#warning-banner {
+  background-color: yellow;
+  padding: 1em;
 }
 
-#header {
-	font-family: "Press Start 2P"; 
-	font-size: 60px;
-	background-color: black;
-	padding: 2%;
-	text-align: center;
-	margin: 2.5%;
+.warning {
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/*header::before {
-	content: url('../assets/images/logo_alpha.png');
-	max-height: 5px;
-	max-width: 5px;
-	display: inline-block;
-	margin-right: 8px;
-}*/
-
-#header a {
-	color: green;
-	text-decoration: none;
+#portfolio {
+  background-color: black;
+  color: white;
+  margin: 16px;
+  padding: 16px;
+  font-family: Bitcount Prop Double;
+  font-weight: 600;
+  font-size: 20pt;
+  border-radius: 15px;
 }
 
-#header a:hover {
-	color: green;
-	background-color: white;
-	cursor: crosshair;
+#portfolio button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: Bitcount Prop Double;
+  font-weight: 600;
+  font-size: 20pt;
+  cursor: pointer;
+  background-color: white;
 }
 
-#content {
-	color: black;
-	background-color: black;
-	width: auto;
-	margin: 2.5%;
-	display: flex;
-	flex-flow: column wrap;
+.bubble {
+	margin: 16px;
+	background: white;
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid red;
+  position: relative;
 }
 
-#content-flex {
-	display: flex;
-}
+.bubble .heading {
+  font-family: Bitcount Prop Double;
+  font-weight: 500;
+  font-size: 14pt;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+  padding: 0.5em;
+  position: absolute;
+  top: -1em;
+  left: ;
+  }
 
-.aside-nav {
-	min-width: 300px;
-	padding-top: 5%;
-	display: inline-block;
-	vertical-align: top;
-	font-family: Courier;
-	color: green;
-	background-color: black;
-}
-
-.aside-nav a {
-	display: block;
-	font-size: 20px;
-	background-color: green;
-	padding: 5%;
-	color: black;
-	text-decoration: none;
-}
-
-.aside-nav a:hover {
-	background-color: white;
-	color: green;
-	cursor: crosshair;
-}
-
-.aside-nav p {
-	margin: 1em;
-}
-
-.main {
-	font-family: Courier;
-	background-color: black;
-	display: flex;
-	flex-flow: column wrap;
-	padding: 2%;
-	color: green;
-	font-size: 20px;
-	text-align: justify;
-}
-
-.main a {
-	color: green;
-}
-
-.main a:hover {
-	background-color: white;
-	color: green;
-	cursor: crosshair;
-}
-
-.main span {
-	font-family: "Press Start 2P"; 
-	font-size: 20px;
-	text-align: left;
-}
-
-.content-footer {
-	font-family: "Silkscreen", sans-serif;
-	font-weight: 700;
-	color: green;
-	font-size: 25px;
-	padding: 1%;
-	text-align: center;
-	align-content: center;
-}
-
-.content-footer a {
-	color: green;
-	text-decoration: none;
-}
-
-.content-footer a:hover {
-	background-color: white;
-	color: green;
-	cursor: crosshair;
-}
-
-#footer {
-	font-size: 25px;
-	background: black;
-	padding: 1%;
-	align-items: center;
-	text-align: center;
-}
-
-/* fonts */
-
-.silkscreen-regular {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
+.bitcount-prop-double-<uniquifier> {
+  font-family: "Bitcount Prop Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
-}
-
-.silkscreen-bold {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
 }
