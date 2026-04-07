@@ -430,6 +430,7 @@ footer {
     position: fixed;
     bottom: 0px;
     left: 0px;
+    background-image: linear-gradient(to bottom, var(--taskbar-blue-1) 0%, var(--taskbar-blue-2) 20%, var(--taskbar-blue-3) 90%);
 }
 
 .taskbar {
@@ -470,6 +471,16 @@ footer {
     border: 2px inset var(--taskbar-blue-3);
 }
 
+.clock {
+    background-image: linear-gradient(to bottom, var(--taskbar-blue-5) 0%, var(--taskbar-blue-4) 20%, var(--taskbar-blue-4) 90%);
+    border-left: 1px solid black;
+    height: 38px;
+    padding: 0 0.5em;
+    align-content: center;
+    position: fixed;
+    right: 0;
+}
+
 .shutdown, .loading {
 	height: 100vh;
 	width: 100vw;
@@ -485,6 +496,8 @@ footer {
     --taskbar-blue-1: rgb(73, 147, 230);
     --taskbar-blue-2: rgb(35, 89, 214);
     --taskbar-blue-3: rgb(38, 97, 222);
+    --taskbar-blue-4: rgb(19, 145, 230);
+    --taskbar-blue-5: rgb(26, 184, 245);
     --window-blue-1: rgb(45, 137, 252);
     --window-blue-2: rgb(0, 84, 226);
     --window-blue-3: rgb(3, 107, 254);

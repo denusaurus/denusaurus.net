@@ -2,72 +2,140 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background: pink;
+	background-image: url("../assets/images/index/bg.gif");
+  overflow-x: hidden;
 }
 
-#warning-banner {
-  background-color: yellow;
-  padding: 1em;
+#header {
+background: #7E9EB0;
+background: linear-gradient(180deg, rgba(126, 158, 176, 1) 8%, rgba(75, 96, 110, 1) 88%);
+border-bottom: 2px solid black;
+padding: 3px;
+display: flex;
+align-items: center;
+gap: 1em;
 }
 
-.warning {
+.header-title, .header-time, .header-date {
+  font-family: Nintendo-DS-BIOS;
   font-size: 14pt;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 #portfolio {
-  background-color: black;
+  background-color: pink;
   color: white;
   margin: 16px;
   padding: 16px;
-  font-family: Bitcount Prop Double;
+  font-family: ;
   font-weight: 600;
   font-size: 20pt;
   border-radius: 15px;
+  border: 4px dashed red;
+  gap: 16px;
+  display: none;
 }
 
 #portfolio button {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  font-family: Bitcount Prop Double;
+  font-family: ;
   font-weight: 600;
   font-size: 20pt;
   cursor: pointer;
-  background-color: white;
+  background-color: red;
+  color: white;
+  border: 5px double white;
+}
+
+#content {
+  display: flex;
+  padding: 0 15%;
 }
 
 .bubble {
-	margin: 16px;
-	background: white;
+	margin: 15px 50px;
+	background: url("../assets/images/index/bubble_bg.png");
   padding: 16px;
-  border-radius: 15px;
-  border: 1px solid red;
+  border: 1px solid black;
   position: relative;
+  font-family: Nintendo-DS-BIOS;
+  font-size: 14pt;
 }
 
 .bubble .heading {
-  font-family: Bitcount Prop Double;
-  font-weight: 500;
-  font-size: 14pt;
+  font-size: 17pt;
   background-color: red;
   color: white;
   border-radius: 15px;
   padding: 0.5em;
   position: absolute;
   top: -1em;
-  left: ;
   }
 
-.bitcount-prop-double-<uniquifier> {
-  font-family: "Bitcount Prop Double", system-ui;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0;
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  font-family: ;
+  padding: 0.5em;
+  position: relative;
+  bottom: 0px;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: Nintendo-DS-BIOS;
+  src: url(../assets/fonts/Nintendo-DS-BIOS.ttf);
+}
+
+/* cursor */
+
+html, body, a, a:hover { cursor:url('https://www.snazzyspace.com/cursorsfolder/pointer-glove.png'), auto !important; }
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+width: 20px;
+height: 7px;
+background-color:#ffffff;
+}
+
+::-webkit-scrollbar-button:start:decrement, body::-webkit-scrollbar-button:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment, body::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  background-image:url(https://www.snazzyspace.com/images/arrowdown.png);
+  background-repeat: no-repeat;background-position:center;
+  -webkit-box-shadow: inset 0 0 16px rgba(214,214,214,0.9);
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  background-image: url(https://www.snazzyspace.com/images/arrowup.png);
+  background-repeat: no-repeat;background-position:center;
+  -webkit-box-shadow: inset 0 0 16px rgba(214,214,214,0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:transparent;
+  background:url(https://www.snazzyspace.com/defaultimages/ff45b4_pink-doodle-hearts.gif); 
+  background-size: 400% auto;
+  border-left:0px solid #E5E5E5;
+  border-right:0px solid #E5E5E5;
+  border-bottom:0px solid #E5E5E5;
+  border-top:0px solid #E5E5E5;
+  border-radius:0%;
+}
+
+::-webkit-scrollbar-track {
+  background:url(https://www.snazzyspace.com/images/track.png); 
+  border-radius:0%;
 }
