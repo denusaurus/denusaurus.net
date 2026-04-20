@@ -99,8 +99,10 @@ article {
     background-color: white;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
-    min-width: 500px;
+    min-width: 660px;
     min-height: 500px;
+    cursor: default;
+    max-height: 1000px;
 }
 
 #window-small {
@@ -115,23 +117,14 @@ article {
     background-color: white;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
-}
-
-#window-fullscreen {
-    box-sizing: border-box;
-    border: 4px outset var(--window-blue-3);
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    border-radius: 15px 15px 0 0;
-    overflow: hidden;
+    cursor: default;
 }
 
 .draggable {
     transform: translate(0px, 0px);
 }
 
-#window-title-bar {
+#window-title {
     cursor: move;
     position: sticky;
     height: 35px;
@@ -143,41 +136,24 @@ article {
     justify-content: space-between;
 }
 
-#window-title-bar .title {
+#window-title p {
     color: white;
     font-family: 'Trebuchet MS';
     font-weight: bold;
     font-size: 10pt;
 }
 
-.content {
+#content {
     position: absolute;
     top: 35px;
     bottom: 0px;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     border: 4px inset var(--window-blue-1);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.title {
-    color: var(--taskbar-blue-3);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 14pt;
-}
-
-.content span {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12pt;
-    padding: 22px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--taskbar-blue-2);
-}
-
-.content .description {
+.description {
     font-family: 'Tahoma';
     font-size: 11pt;
     padding: 20px;
@@ -190,30 +166,53 @@ article {
     flex-flow: column wrap;
 }
 
-.content-images {
+.title {
+    color: var(--taskbar-blue-3);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 21pt;
+}
+
+.content-area {
     display: flex;
+    overflow-y: scroll;
 }
 
 .sidebar {
     background: linear-gradient( rgb(122, 161, 231) 0%, rgb(99, 117, 215) 100%);
-    min-width: 200px;
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.6em;
+    gap: 0.6em;
+    position: sticky;
+    top: 0;
+    overflow-y: hidden;
 }
 
-.sidebar button {
+.task-box-title {
     background: linear-gradient(90deg, white 75%, var(--box-lightblue) 100%);
-    display: block;
+    color: var(--taskbar-blue-3);
     padding: 1em;
-    margin: 1em;
-    list-style-type: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 8pt;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
 
+.task-box-title:hover {
+    cursor: pointer;
+}
+
+.task-box-content {
+    background-color: var(--window-blue-4);
+    padding: 1em;
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+
 .gallery {
     background-color: white;
-    display: flex;
     justify-content: center;
     flex-flow: row wrap;
     padding: 1em;
@@ -256,6 +255,7 @@ article {
     border-radius: 15px 15px 0 0;
     display: flex;
     flex-direction: column;
+    cursor: default;
 }
 
 .closed-start {
@@ -329,6 +329,7 @@ article {
 #about, #cv, #contact {
     display: grid;
     place-items: center;
+    cursor: default;
 }
 
 .small-box header {
@@ -364,6 +365,7 @@ article {
     bottom: 38px;
     right: 0;
     padding: 10px;
+    cursor: default;
 }
 
 #clippy img {
@@ -396,6 +398,7 @@ article {
     display: block;
     position: relative;
     margin-top: -1.8em;
+    cursor: pointer;
 }
 
 #fool, #fool-contact {
@@ -501,6 +504,7 @@ footer {
     --window-blue-1: rgb(45, 137, 252);
     --window-blue-2: rgb(0, 84, 226);
     --window-blue-3: rgb(3, 107, 254);
+    --window-blue-4: rgb(213, 223, 248);
     --icon-red-1: rgb(255, 51, 0);
     --icon-red-2: rgb(152, 0, 0);
     --folder-lightblue: rgb(214, 223, 245);

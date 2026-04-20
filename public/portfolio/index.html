@@ -135,11 +135,11 @@
 
 		<div id="titk" class="open">
 			<div id="window" class="window-titk draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
+				<div id="window-title" class="handle">
+					<p>
 						Tender is the Knight
-					</div>
-					<div class="title-bar-icons">
+					</p>
+					<div>
 						<button onclick="minimizeTitk()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -151,22 +151,47 @@
 						</button>
 					</div>
 				</div>
-				<div class="content">
+				<div id="content">
 					<div class="description">
 						<div class="title">
-							<h1>Tender is the Knight</h1>
+							Tender is the Knight
 						</div>
 						<article>
 							"Tender is the Knight" is the title of my Bachelor film, directed and produced by Martine Samdal and me, during our final year at Volda University College. It's a short film about the lonely knight Angus, looking for love on the dating app "Tender" and it's available on <a href="https://www.youtube.com/watch?v=gBYpzZtKmhs" target="_blank">YouTube</a>:)
 						</article>
+						<article>
+							We worked with Procreate for the pre-production, animated in Toon Boom Harmony and composited in Adobe After Effects.
+						</article>
 					</div>
-					<div class="content-images">
+					<div class="content-area">
 						<div class="sidebar">
-							<button onclick="toggleA()">Character design</button>
-							<button onclick="toggleB()">Prop design</button>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleA()">
+									Character design
+								</div>
+								<div class="task-box-content">
+									Character sheets and development. I focused mostly on the side characters.
+								</div>
+							</div>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleB()">
+									Prop design
+								</div>
+								<div class="task-box-content">
+									I designed a couple props for the film, notably almost all the "Tender" profiles.
+								</div>
+							</div>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleC()">
+									Storyboards
+								</div>
+								<div class="task-box-content">
+									Some early storyboard development in Procreate. I quickly switched to Storyboard Pro for efficiency.
+								</div>
+							</div>
 						</div>
 						<div class="gallery-area">
-							<div class="gallery" id="gallery-a">
+							<div class="gallery" id="gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/medusa.png">
@@ -208,7 +233,7 @@
 									The Bartender
 								</div>
 							</div>
-							<div class="gallery" id="gallery-b"> 
+							<div class="gallery" id="gallery-b" style="display: none;"> 
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/Ariella.png">
@@ -239,7 +264,7 @@
 											<img src="../assets/images/portfolio/titk/Solfrid.png" />
 										</a>
 									</div>
-									<a href="https://www.imdb.com/title/tt33513255/?ref_=nm_knf_c_1"> Askeladden's princess</a>
+									<a href="https://www.imdb.com/title/tt33513255/?ref_=nm_knf_c_1" target="_blank"> Askeladden's princess</a>
 								</div>
 							</div>
 						</div>

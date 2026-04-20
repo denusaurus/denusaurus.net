@@ -1,6 +1,7 @@
 function openPortfolio() {
   location.href = "portfolio/loading.html";
 }
+
 // fancybox
 
 Fancybox.bind("[data-fancybox]", {
@@ -334,6 +335,21 @@ interact('.resizable')
   })
 
 // bring to top
+
+// gallery toggle
+
+var galleryA = document.getElementById("gallery-a");
+var galleryB = document.getElementById("gallery-b");
+
+function toggleA() {
+  galleryA.style.display = "flex";
+  galleryB.style.display = "none"
+}
+
+function toggleB() {
+  galleryB.style.display = "flex"
+  galleryA.style.display = "none"
+}
 
 // clippy toggle
 
