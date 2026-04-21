@@ -38,27 +38,23 @@
 				<img src="../assets/icons/23.ico">
 				<p>Tender is the Knight</p>
 			</button>
-			<button id="illu-folder" onclick="highlightIllu()" ondblclick="openIllu()" class="unclicked">
+			<button id="chara-folder" onclick="highlightChara()" ondblclick="openChara()" class="unclicked">
 				<img src="../assets/icons/23.ico">
-				<p>Illustrations</p>
+				<p>Character Design</p>
 			</button>
-			<button id="sketchb-folder" onclick="highlightSketchb()" ondblclick="openSketchb()" class="unclicked">
+			<button id="person-folder" onclick="highlightPerson()" ondblclick="openPerson()" class="unclicked">
 				<img src="../assets/icons/23.ico">
-				<p>Sketchbook</p>
-			</button>
-			<button id="croquis-folder" onclick="highlightCroquis()" ondblclick="openCroquis()" class="unclicked">
-				<img src="../assets/icons/23.ico">
-				<p>Life Drawing</p>
+				<p>Personal art</p>
 			</button>
 		</div>
 
 		<div id="dsdmt" class="closed">
 			<div id="window" class="window-dsdmt draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
+				<div id="window-title" class="handle">
+					<p>
 						Die Schule der magischen Tiere
-					</div>
-					<div class="title-bar-icons">
+					</p>
+					<div>
 						<button onclick="minimizeDsdmt()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -70,65 +66,87 @@
 						</button>
 					</div>
 				</div>
-				<div class="content">
+				<div id="content">
 					<div class="description">
 						<div class="title">
-							<h1>Die Schule der magischen Tiere</h1>
+							Die Schule der magischen Tiere
 						</div>
 						<article>
 							Illustrations for the German children's book series <a href="https://www.carlsen.de/die-schule-der-magischen-tiere?srsltid=AfmBOopkGZbKFat8UGZIdKIa7sMluP4vdV7CK-jBStLpD1XvXC9gemZ-" target="_blank">"Die Schule der magischen Tiere"</a>, written by Margit Auer and published by Carlsen. The team behind the redesign is called "die Farbfüchse" and consists of <a href="https://celiakaspar.de/" target="_blank">Celia Kaspar</a>, the team leader and character designer, <a href="https://lucysophiewitthoff.com/" target="_blank">Lucy-Sophie Witthoff</a> and  me. I joined the team in February of 2025 and the project is ongoing as of today.
 						</article>
 					</div>
-					<div class="gallery">
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg" />
-								</a>
+					<div class="content-area">	
+						<div class="sidebar">
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleA()">
+									Books 1-4 & 16
+								</div>
+								<div class="task-box-content">
+									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations.
+								</div>
 							</div>
-							Ida & Rabatt
-						</div>
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg" />
-								</a>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleA()">
+									Books 5-10 & "Eingeschneit"
+								</div>
+								<div class="task-box-content">
+									I started taking on more responsibilities. I was now in charge of the fully colored double-page spread on the pastedown, in addition to some illustrations in the text.
+								</div>
 							</div>
-							Rabatt
 						</div>
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Henrietta.jpg">
-								</a>
-							</div>
-							Henrietta
+						<div class="gallery-area">
+							<div class="gallery" id="gallery-a" style="display: flex;">
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg" />
+										</a>
+									</div>
+									Ida & Rabatt
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg" />
+										</a>
+									</div>
+									Rabatt
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+										</a>
+									</div>
+									Henrietta
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Karajan.jpg">
+										</a>
+									</div>
+									Karajan
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Bus.jpg">
+										</a>
+									</div>
+									Der magische Bus
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+										</a>
+									</div>
+									Vorsatzskizzen
+								</div>
+							</div>	
 						</div>
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Karajan.jpg">
-								</a>
-							</div>
-							Karajan
-						</div>
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Bus.jpg">
-								</a>
-							</div>
-							Der magische Bus
-						</div>
-						<div>
-							<div class="portfolio-image">
-								<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
-									<img src="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
-								</a>
-							</div>
-							Vorsatzskizzen
-						</div>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -166,10 +184,10 @@
 					<div class="content-area">
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleA()">
+								<div class="task-box-title-active" id="tasktitle-a" onclick="toggleA()">
 									Character design
 								</div>
-								<div class="task-box-content">
+								<div class="task-box-content-active" id="taskcont-a">
 									Character sheets and development. I focused mostly on the side characters.
 								</div>
 							</div>
@@ -273,107 +291,136 @@
 			</div>
 		</div>
 
-		<div id="illu" class="closed">
-			<div id="window" class="window-illu draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
-						Illustrations
-					</div>
-					<div class="title-bar-icons">
-						<button onclick="minimizeIllu()">
+		<div id="chara" class="closed">
+			<div id="window" class="window-chara draggable resizable">
+				<div id="window-title" class="handle">
+					<p>
+						Character design
+					</p>
+					<div>
+						<button onclick="minimizeChara()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
 							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
 						</button>
-						<button onclick="closeIllu()">
+						<button onclick="closeChara()">
 							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
 						</button>
 					</div>
 				</div>
-				<div class="content">
-					<div class="title">
-						<h1>Illustrations</h1>
-					</div>
+				<div id="content">
 					<div class="description">
+						<div class="title">
+						Character design
+						</div>
 						<article>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
+							Here is a selection of some character designs. None of these were commissioned, they're all personal work.
 						</article>
 					</div>
-					<div class="gallery">
-						<img src="../assets/images/portfolio/digital/Lamine.png" class="portfolio-image">
-						<img src="../assets/images/portfolio/digital/Oolong.png" class="portfolio-image">
+					<div class="content-area">
+						<div class="sidebar">
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleA()">
+									Dungeons & Dragons
+								</div>
+								<div class="task-box-content">
+									Here are all my characters from my DnD campaigns. I always make sheets for them, I find it to be good practice.
+								</div>
+							</div>
+						</div>
+						<div class="gallery-area">
+							<div class="gallery" id="gallery-a" style="display: flex;">
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/medusa.png">
+											<img src="../assets/images/portfolio/digital/Lamine.png" class="portfolio-image">
+										</a>
+									</div>
+									Lamine Yamal
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/medusa.png">
+											<img src="../assets/images/portfolio/digital/Oolong.png" class="portfolio-image">
+										</a>
+									</div>
+									High School AU Oolong
+								</div>
+							</div>
+						</div>
 					</div>	
 				</div>
 			</div>
 		</div>
 
-		<div id="sketchbook" class="closed">
-			<div id="window" class="window-illu draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
-						Sketchbook
-					</div>
-					<div class="title-bar-icons">
-						<button onclick="minimizeSketchb()">
+		<div id="person" class="closed">
+			<div id="window" class="window-person draggable resizable">
+				<div id="window-title" class="handle">
+					<p>
+						Personal art
+					</p>
+					<div>
+						<button onclick="minimizePerson()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
 							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
 						</button>
-						<button onclick="closeSketchb()">
+						<button onclick="closePerson()">
 							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
 						</button>
 					</div>
 				</div>
 				<div class="content">
-					<div class="title">
-						<h1>Sketchbook</h1>
-					</div>
 					<div class="description">
+						<div class="title">
+							Personal art
+						</div>
 						<article>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
+							Miscellaneous selection from my sketchbook, iPad and croquis.
 						</article>
 					</div>
-					<div class="gallery">
-						<img src="../assets/images/portfolio/sketchbook/Rôzne.jpg" class="portfolio-image">
-					</div>	
-				</div>
-			</div>
-		</div>
-
-		<div id="croquis" class="closed">
-			<div id="window" class="window-illu draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
-						Life Drawing
+					<div class="content-area">
+						<div class="sidebar">
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleA()">
+									Character design
+								</div>
+								<div class="task-box-content">
+									Character sheets and development. I focused mostly on the side characters.
+								</div>
+							</div>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleB()">
+									Prop design
+								</div>
+								<div class="task-box-content">
+									I designed a couple props for the film, notably almost all the "Tender" profiles.
+								</div>
+							</div>
+							<div class="task-box">
+								<div class="task-box-title" onclick="toggleC()">
+									Storyboards
+								</div>
+								<div class="task-box-content">
+									Some early storyboard development in Procreate. I quickly switched to Storyboard Pro for efficiency.
+								</div>
+							</div>
+						</div>
+						<div class="gallery-area">
+							<div class="gallery" id="gallery-a" style="display: flex;">
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/medusa.png">
+											<img src="../assets/images/portfolio/sketchbook/Rôzne.jpg" class="portfolio-image">
+										</a>
+									</div>
+									Medusa
+								</div>
+							</div>
+						</div>	
 					</div>
-					<div class="title-bar-icons">
-						<button onclick="minimizeCroquis()">
-							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
-						</button>
-						<button>
-							<img src="../assets/images/portfolio/icon_maximize.png" class="header-button">
-						</button>
-						<button onclick="closeCroquis()">
-							<img src="../assets/images/portfolio/icon_close.png" class="header-button">
-						</button>
-					</div>
-				</div>
-				<div class="content">
-					<div class="title">
-						<h1>Life Drawing</h1>
-					</div>
-					<div class="description">
-						<article>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus earum quisquam alias, sequi iure doloribus doloremque temporibus aperiam hic. Unde voluptates cumque doloremque fugit tempora? Explicabo atque quidem porro.
-						</article>
-					</div>
-					<div class="gallery">
-						<img src="../assets/images/portfolio/croquis/7.png" class="portfolio-image">
-						<img src="../assets/images/portfolio/croquis/6.png" class="portfolio-image">
-						<img src="../assets/images/portfolio/croquis/3.png" class="portfolio-image">
-					</div>	
 				</div>
 			</div>
 		</div>
@@ -426,10 +473,10 @@
 
 		<div id="about" class="closed">
 			<div id="window-small" class="window-about draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
+				<div id="window-title" class="handle">
+					<p>
 						About me
-					</div>
+					</p>
 					<div class="title-bar-icons">
 						<button>
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
@@ -442,34 +489,38 @@
 						</button>
 					</div>
 				</div>
-				<div class="content noscroll">
-					<div class="title">
-						<h1>About me</h1>
+				<div class="content-area-small noscroll">
+					<div class="sidebar-small">
+						<img src="../assets/icons/1012.ico">
 					</div>
-					<div class="description">
+					<div class="description-small">
+						<div class="title">
+							About me
+						</div>
 						<article>
 							Hi! I'm Dani (she/her).
 							<br>I'm a 25 year-old freelancing artist based in Bratislava, Slovakia.
-							<br>
-							<br>I have a Bachelor in Animation from Høgskulen i Volda, Norway and I've been working on different animated short films and TV series, as well as illustrating a children's book series.
-							<br>
-							<br>I grew up in Bratislava, but I moved to Luxembourg when I was 13, where I attended an art high school and extracurricular drawing classes. I briefly studied art history in Vienna, Austria, but interrupted my studies to pursue animation. I got a Bachelor's degree from Volda University College in Norway.
-							<br>
-							<br>I've since worked on a couple animated short films and a children's TV show, and I'm currently illustrating a <a href="#">children's book series</a>.
-							<br>
-							<br>In my spare time I enjoy working on <a href="#">my own creative projects</a>, watching movies or long YouTube essays, and hitting the gym or going for a run. I also speak eight languages and I'm learning three more (HTML, CSS and JavaScript).
 						</article>
-					</div>
+						<article>
+							I have a Bachelor in Animation from Volda University College in Norway and I've worked on different animated short films and TV series and I'm currently illustrating a <a href="#">children's book series</a>.
+						</article>
+						<article>
+							Always nagged by teachers for doodling and not paying attention, my passion for art turned serious when I chose an art high school and extracurricular drawing classes where I could flourish. I briefly studied art history ate the University of Vienna, Austria, but interrupted my boring academic studies to regain my passion by pursuing animation in my hometown. After a very convincing Erasmus semester, I finished my degree in Norway.
+						</article>
+						<article>
+							In my spare time I enjoy working on <a href="#">my own creative projects</a>, tinkering on my website, playing videogames and going on adventures with my dog. I also speak eight languages and I'm learning FIVE more (HTML, CSS, JavaScript, Japanese and Dog).
+						</article>
+					</div>	
 				</div>
 			</div>
 		</div>
 
 		<div id="cv" class="closed">
 			<div id="window-small" class="window-cv draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
+				<div id="window-title" class="handle">
+					<p>
 						CV
-					</div>
+					</p>
 					<div class="title-bar-icons">
 						<button>
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
@@ -482,21 +533,23 @@
 						</button>
 					</div>
 				</div>
-				<div class="content">
-					<div class="title">
-						<h1>Curriculum</h1>
+				<div class="content-area-small">
+					<div class="sidebar-small">
+						<img src="../assets/images/portfolio/profile_pic.JPG" style="height: 200px;">
+						<button>
+							download CV
+						</button>
+						<button>
+							download Portfolio
+						</button>
 					</div>
-					<div class="description">
-						<article>
-							<a href="#">x</a> Scroll down to download my CV & Portfolio:)
-						</article>
-						<article class="bio">
-							<div>
+					<div class="description-small">
+						<div class="title">
+							Curriculum
+						</div>
+						<article >
 								Name / Daniela Pardiñas
 								<br>Date of Birth / 6th September 2000
-							</div>
-							<img src="../assets/images/portfolio/profile_pic.JPG" style="height: 200px;">
-							<br>
 						</article>
 						<article>
 							<br>Experience
@@ -665,14 +718,11 @@
 			<button onclick="openTitk()" id="titk-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Tender is the Knight
 			</button>
-			<button onclick="openIllu()" id="illu-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Illustration
+			<button onclick="openChara()" id="chara-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Character design
 			</button>
-			<button onclick="openSketchb()" id="sketchb-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Sketchbook
-			</button>
-			<button onclick="openCroquis()" id="croquis-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Life Drawing
+			<button onclick="openPerson()" id="person-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Personal art
 			</button>
 		</div>
 		<div class="clock">

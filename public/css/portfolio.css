@@ -175,7 +175,7 @@ article {
 
 .content-area {
     display: flex;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -187,7 +187,7 @@ article {
     gap: 0.6em;
     position: sticky;
     top: 0;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .task-box-title {
@@ -204,8 +204,30 @@ article {
     cursor: pointer;
 }
 
+.task-box-title-active {
+    color: white;
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    background: #0348B8;
+    background: linear-gradient(45deg, rgba(3, 72, 184, 1) 0%, rgba(39, 91, 203, 1) 79%);
+}
+
+.task-box-title-active:hover {
+    cursor: pointer;
+}
+
 .task-box-content {
     background-color: var(--window-blue-4);
+    padding: 1em;
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+
+.task-box-content-active {
+    background-color: white;
     padding: 1em;
     font-family: Tahoma;
     font-size: 9pt;
@@ -220,6 +242,7 @@ article {
     font-family: 'Tahoma';
     font-size: 10pt;
     text-align: center;
+    overflow-y: scroll;
 }
 
 .portfolio-image {
@@ -330,6 +353,27 @@ article {
     display: grid;
     place-items: center;
     cursor: default;
+}
+
+.content-area-small {
+    display: flex;
+    overflow: hidden;
+    padding: 1em;
+    gap: 1em;
+}
+
+.sidebar-small {
+    padding: ;
+}
+
+.description-small {
+    font-family: 'Tahoma';
+    font-size: 11pt;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .small-box header {

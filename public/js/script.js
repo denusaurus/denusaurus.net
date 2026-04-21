@@ -65,54 +65,37 @@ window.addEventListener('click', function(e){
   }
 })
 
-const illuF = document.getElementById("illu-folder")
+const charaF = document.getElementById("chara-folder")
 
-function highlightIllu() {
-  if (illuF.className == "unclicked")
-      illuF.className = "clicked";
+function highlightChara() {
+  if (charaF.className == "unclicked")
+      charaF.className = "clicked";
   else
-      illuF.className = "unclicked";
+      charaF.className = "unclicked";
 }
 
 window.addEventListener('click', function(e){
-  if (this.document.getElementById("illu-folder").contains(e.target)){
-    illuF.className = "clicked";
+  if (this.document.getElementById("chara-folder").contains(e.target)){
+    charaF.className = "clicked";
   } else{
-    illuF.className = "unclicked";
+    charaF.className = "unclicked";
   }
 })
 
-const sketchbF = document.getElementById("sketchb-folder")
+const personF = document.getElementById("person-folder")
 
-function highlightSketchb() {
-  if (sketchbF.className == "unclicked")
-      sketchbF.className = "clicked";
+function highlightPerson() {
+  if (personF.className == "unclicked")
+      personF.className = "clicked";
   else
-      sketchbF.className = "unclicked";
+      personF.className = "unclicked";
 }
 
 window.addEventListener('click', function(e){
-  if (this.document.getElementById("sketchb-folder").contains(e.target)){
-    sketchbF.className = "clicked";
+  if (this.document.getElementById("person-folder").contains(e.target)){
+    personF.className = "clicked";
   } else{
-    sketchbF.className = "unclicked";
-  }
-})
-
-const croquisF = document.getElementById("croquis-folder")
-
-function highlightCroquis() {
-  if (croquisF.className == "unclicked")
-      croquisF.className = "clicked";
-  else
-      croquisF.className = "unclicked";
-}
-
-window.addEventListener('click', function(e){
-  if (this.document.getElementById("croquis-folder").contains(e.target)){
-    croquisF.className = "clicked";
-  } else{
-    croquisF.className = "unclicked";
+    personF.className = "unclicked";
   }
 })
 
@@ -134,28 +117,20 @@ function minimizeTitk() {
   titkT.classList.remove("pressed");
 }
 
-const illuT = document.getElementById("illu-tab")
+const charaT = document.getElementById("chara-tab")
 
-function minimizeIllu() {
-  illu.className = "closed";
-  illuT.style.display = "flex";
-  illuT.classList.remove("pressed");
+function minimizeChara() {
+  chara.className = "closed";
+  charaT.style.display = "flex";
+  charaT.classList.remove("pressed");
 }
 
-const sketchbT = document.getElementById("sketchb-tab")
+const personT = document.getElementById("person-tab")
 
-function minimizeSketchb() {
-  sketchb.className = "closed";
-  sketchbT.style.display = "flex";
-  sketchbT.classList.remove("pressed");
-}
-
-const croquisT = document.getElementById("croquis-tab")
-
-function minimizeCroquis() {
-  croquis.className = "closed";
-  croquisT.style.display = "flex";
-  croquisT.classList.remove("pressed");
+function minimizePerson() {
+  person.className = "closed";
+  personT.style.display = "flex";
+  personT.classList.remove("pressed");
 }
 
 // open & close
@@ -188,46 +163,32 @@ function closeTitk() {
   titkT.style.display = "none";
 }
 
-const sketchb = document.getElementById("sketchbook")
+const chara = document.getElementById("chara")
 
-function openSketchb() {
-  sketchb.className = "open";
-  sketchbF.className = "unclicked";
-  sketchbT.style.display = "flex";
-  sketchbT.classList.add("pressed");
+function openChara() {
+  chara.className = "open";
+  charaF.className = "unclicked";
+  charaT.style.display = "flex";
+  charaT.classList.add("pressed");
 }
 
-function closeSketchb() {
-  sketchb.className = "closed";
-  sketchbT.style.display = "none";
+function closeChara() {
+  chara.className = "closed";
+  charaT.style.display = "none";
 }
 
-const illu = document.getElementById("illu")
+const person = document.getElementById("person")
 
-function openIllu() {
-  illu.className = "open";
-  illuF.className = "unclicked";
-  illuT.style.display = "flex";
-  illuT.classList.add("pressed");
+function openPerson() {
+  person.className = "open";
+  personF.className = "unclicked";
+  personT.style.display = "flex";
+  personT.classList.add("pressed");
 }
 
-function closeIllu() {
-  illu.className = "closed";
-  illuT.style.display = "none";
-}
-
-const croquis = document.getElementById("croquis")
-
-function openCroquis() {
-  croquis.className = "open";
-  croquisF.className = "unclicked";
-  croquisT.style.display = "flex";
-  croquisT.classList.add("pressed");
-}
-
-function closeCroquis() {
-  croquis.className = "closed";
-  croquisT.style.display = "none";
+function closePerson() {
+  person.className = "closed";
+  personT.style.display = "none";
 }
 
 const about = document.getElementById("about")
@@ -340,15 +301,26 @@ interact('.resizable')
 
 var galleryA = document.getElementById("gallery-a");
 var galleryB = document.getElementById("gallery-b");
+var tasktitleA = document.getElementById("tasktitle-a");
+var taskcontA = document.getElementById("taskcont-a")
 
 function toggleA() {
   galleryA.style.display = "flex";
-  galleryB.style.display = "none"
+  galleryB.style.display = "none";
+  tasktitleA.classList.remove("task-box-title");
+  tasktitleA.classList.add("task-box-title-active");
+  taskcontA.classList.remove("task-box-content");
+  taskcontA.classList.add("task-box-content-active");
 }
 
 function toggleB() {
-  galleryB.style.display = "flex"
-  galleryA.style.display = "none"
+  galleryB.style.display = "flex";
+  galleryA.style.display = "none";
+  tasktitleA.classList.remove("task-box-title-active");
+  tasktitleA.classList.add("task-box-title");
+  taskcontA.classList.remove("task-box-content-active");
+  taskcontA.classList.add("task-box-content");
+  
 }
 
 // clippy toggle
