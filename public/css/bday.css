@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+	padding: 15px;
+	box-sizing: border-box;
+    background: #3a5976;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h1 {
+    margin: 0;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+main {
+    background-color: #2d4762;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+}
+
+.post {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-icon {
+    
+}
+
+.speechbubble {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 2;
+    gap: 15px;
+}
+
+.username {
+    color: lightgray;
+    font-weight: bold;
+}
+
+.headline {
+    font-weight: bold
+}
+
+.hashtags {
+    color: lightgrey;
+}
+
+.user-repost {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+}
+
+.username-repost {
+    text-decoration: underline;
+}
+
+.repost {
+    display: flex;
+    gap: 15px;
+    border-left: 4px solid lightgrey;
+}
+
+.repost-flex {
+    display: flex;
+    flex-flow: column wrap;
+}
