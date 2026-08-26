@@ -57,23 +57,19 @@ main {
     color: lightgrey;
 }
 
-.user-repost {
+.repost {
     display: flex;
     flex-flow: column wrap;
-    gap: 15px;
+    border-left: 5px solid lightgrey;
+    gap: 1em;
+    padding: 1em;
 }
 
 .username-repost {
     text-decoration: underline;
 }
 
-.repost {
-    display: flex;
-    gap: 15px;
-    border-left: 4px solid lightgrey;
-}
-
-.repost-flex {
-    display: flex;
-    flex-flow: column wrap;
+ul {
+    margin: 0;
+    padding: 0 1em;
 }
