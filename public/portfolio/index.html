@@ -38,9 +38,10 @@
 
 	<main>
 		<div class="desktop-icons">
-			<button id="dsdmt-folder" onclick="highlightDsdmt()" ondblclick="openDsdmt()" class="unclicked">
+			<button id="dsdmt-folder" onclick="highlightDsdmt()" ondblclick="openDsdmt()" class="unclicked tooltip">
 				<img src="../assets/icons/23.ico">
 				<p>Die Schule der magischen Tiere</p>
+				<span class="tooltiptext">Die Schule der magischen Tiere</span>
 			</button>
 			<button id="titk-folder" onclick="highlightTitk()" ondblclick="openTitk()" class="unclicked">
 				<img src="../assets/icons/23.ico">
@@ -56,7 +57,7 @@
 			</button>
 		</div>
 
-		<div id="dsdmt" class="closed">
+		<div id="dsdmt" class="open">
 			<div id="window" class="window-dsdmt draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
@@ -86,19 +87,19 @@
 					<div class="content-area">	
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleA()">
+								<div class="task-box-title active" id="tasktitle-a" onclick="toggleA()">
 									Books 1-4 & 16
 								</div>
-								<div class="task-box-content">
-									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations.
+								<div class="task-box-content active" id="taskcont-a">
+									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations. I also helped out with the rough sketches of more complex illustrations.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleA()">
-									Books 5-10 & "Eingeschneit"
+								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
+									Books 5-10 & 17
 								</div>
-								<div class="task-box-content">
-									I started taking on more responsibilities. I was now in charge of the fully colored double-page spread on the pastedown, in addition to some illustrations in the text.
+								<div class="task-box-content" id="taskcont-b">
+									I took on more responsibilities and was now in charge of the fully colored double-page spread on the pastedown, in addition to more complex illustrations inside the text, which I was now rendering myself from start to finish.
 								</div>
 							</div>
 						</div>
@@ -106,23 +107,23 @@
 							<div class="gallery" id="gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
-											<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg" />
+										<a data-fancybox="gallery-dsdmt" data-caption="Ida / Rabatt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
 										</a>
 									</div>
 									Ida & Rabatt
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
-											<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg" />
+										<a data-fancybox="gallery-dsdmt" data-caption="Rabatt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg">
 										</a>
 									</div>
 									Rabatt
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+										<a data-fancybox="gallery-dsdmt" data-caption="Henrietta" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Henrietta.jpg">
 										</a>
 									</div>
@@ -130,7 +131,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
+										<a data-fancybox="gallery-dsdmt" data-caption="Karajan" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Karajan.jpg">
 										</a>
 									</div>
@@ -146,20 +147,70 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatzskizzen" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
 										</a>
 									</div>
 									Vorsatzskizzen
 								</div>
 							</div>	
+							<div class="gallery" id="gallery-b" style="display: none;">
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Tiere" href="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
+										</a>
+									</div>
+									Diverse Tiere
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Menschen" href="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
+										</a>
+									</div>
+									Diverse Menschen
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Vignetten" href="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
+										</a>
+									</div>
+									Diverse Vignetten
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Bus_2.jpg">
+										</a>
+									</div>
+									Der magische Bus
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 8" href="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
+										</a>
+									</div>
+									Vorsatz Band 8
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 10" href="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
+										</a>
+									</div>
+									Vorsatz Band 10
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="titk" class="open">
+		<div id="titk" class="closed">
 			<div id="window" class="window-titk draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
@@ -192,15 +243,15 @@
 					<div class="content-area">
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title-active" id="tasktitle-a" onclick="toggleA()">
+								<div class="task-box-title active" id="tasktitle-a" onclick="toggleA()">
 									Character design
 								</div>
-								<div class="task-box-content-active" id="taskcont-a">
+								<div class="task-box-content active" id="taskcont-a">
 									Character sheets and development. I focused mostly on the side characters.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleB()">
+								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
 									Prop design
 								</div>
 								<div class="task-box-content">
@@ -386,33 +437,25 @@
 							Personal art
 						</div>
 						<article>
-							Miscellaneous selection from my sketchbook, iPad and croquis.
+							Miscellaneous selection from my sketchbook, iPad and croquis sessions.
 						</article>
 					</div>
 					<div class="content-area">
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleA()">
-									Character design
+								<div class="task-box-title-active" id="tasktitle-a" onclick="toggleA()">
+									Books 1-4 & 16
 								</div>
-								<div class="task-box-content">
-									Character sheets and development. I focused mostly on the side characters.
-								</div>
-							</div>
-							<div class="task-box">
-								<div class="task-box-title" onclick="toggleB()">
-									Prop design
-								</div>
-								<div class="task-box-content">
-									I designed a couple props for the film, notably almost all the "Tender" profiles.
+								<div class="task-box-content-active" id="taskcont-a">
+									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations. I also helped out with the rough sketches of more complex illustrations.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" onclick="toggleC()">
-									Storyboards
+								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
+									Books 5-10
 								</div>
-								<div class="task-box-content">
-									Some early storyboard development in Procreate. I quickly switched to Storyboard Pro for efficiency.
+								<div class="task-box-content" id="taskcont-b">
+									I took on more responsibilities and was now in charge of the fully colored double-page spread on the pastedown, in addition to more complex illustrations inside the text, which I was now rendering myself from start to finish.
 								</div>
 							</div>
 						</div>
@@ -420,14 +463,104 @@
 							<div class="gallery" id="gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/medusa.png">
-											<img src="../assets/images/portfolio/sketchbook/Rôzne.jpg" class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Ida / Rabatt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
 										</a>
 									</div>
-									Medusa
+									Ida & Rabatt
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Rabatt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg">
+										</a>
+									</div>
+									Rabatt
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Henrietta" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+										</a>
+									</div>
+									Henrietta
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Karajan" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Karajan.jpg">
+										</a>
+									</div>
+									Karajan
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Bus.jpg">
+										</a>
+									</div>
+									Der magische Bus
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatzskizzen" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+										</a>
+									</div>
+									Vorsatzskizzen
+								</div>
+							</div>	
+							<div class="gallery" id="gallery-b" style="display: none;">
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Tiere" href="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
+										</a>
+									</div>
+									Diverse Tiere
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Menschen" href="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
+										</a>
+									</div>
+									Diverse Menschen
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Vignetten" href="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
+										</a>
+									</div>
+									Diverse Vignetten
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Bus_2.jpg">
+										</a>
+									</div>
+									Der magische Bus
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 8" href="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
+										</a>
+									</div>
+									Vorsatz Band 8
+								</div>
+								<div>
+									<div class="portfolio-image">
+										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 10" href="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
+											<img src="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
+										</a>
+									</div>
+									Vorsatz Band 10
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
@@ -486,7 +619,7 @@
 						About me
 					</p>
 					<div class="title-bar-icons">
-						<button>
+						<button onclick="minimizeAbout()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
@@ -498,8 +631,8 @@
 					</div>
 				</div>
 				<div class="content-area-small noscroll">
-					<div class="sidebar-small">
-						<img src="../assets/icons/1012.ico">
+					<div style="padding: 1em;">
+						<img src="../assets/icons/1078.ico">
 					</div>
 					<div class="description-small">
 						<div class="title">
@@ -507,16 +640,16 @@
 						</div>
 						<article>
 							Hi! I'm Dani (she/her).
-							<br>I'm a 25 year-old freelancing artist based in Bratislava, Slovakia.
+							<br>I'm a 26 year-old freelancing artist based in Bratislava, Slovakia.
 						</article>
 						<article>
-							I have a Bachelor in Animation from Volda University College in Norway and I've worked on different animated short films and TV series and I'm currently illustrating a <a href="#">children's book series</a>.
+							I have a Bachelor in Animation from Volda University College in Norway and I've worked on different animated short films and TV series and I'm currently illustrating a <a href="#" onclick="openDsdmt()">children's book series</a>.
 						</article>
 						<article>
-							Always nagged by teachers for doodling and not paying attention, my passion for art turned serious when I chose an art high school and extracurricular drawing classes where I could flourish. I briefly studied art history ate the University of Vienna, Austria, but interrupted my boring academic studies to regain my passion by pursuing animation in my hometown. After a very convincing Erasmus semester, I finished my degree in Norway.
+							Always nagged by teachers for doodling and not paying attention, my passion for art turned serious when I chose an art high school and extracurricular drawing classes where I could flourish. I briefly studied art history at the University of Vienna, Austria, but interrupted my boring academic studies to regain my passion by pursuing animation in my hometown. After a very convincing Erasmus semester, I finished my degree in Norway.
 						</article>
 						<article>
-							In my spare time I enjoy working on <a href="#">my own creative projects</a>, tinkering on my website, playing videogames and going on adventures with my dog. I also speak eight languages and I'm learning FIVE more (HTML, CSS, JavaScript, Japanese and Dog).
+							In my spare time I enjoy working on <a href="#" onclick="openPerson()">my own creative projects</a>, tinkering on my website, playing videogames and going on adventures with my dog. I also speak eight languages and I'm learning FIVE more (HTML, CSS, JavaScript, Japanese and Dog).
 						</article>
 					</div>	
 				</div>
@@ -530,7 +663,7 @@
 						CV
 					</p>
 					<div class="title-bar-icons">
-						<button>
+						<button onclick="minimizeCv()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
@@ -541,82 +674,194 @@
 						</button>
 					</div>
 				</div>
-				<div class="content-area-small">
-					<div class="sidebar-small">
-						<img src="../assets/images/portfolio/profile_pic.JPG" style="height: 200px;">
-						<button>
-							download CV
-						</button>
-						<button>
-							download Portfolio
-						</button>
-					</div>
-					<div class="description-small">
-						<div class="title">
-							Curriculum
+				<div id="content">
+					<div class="content-area-small">
+						<div class="sidebar-small">
+							<img src="../assets/images/portfolio/profile_pic.jpeg" style="height: 200px; border: 1px solid var(--lightgrey);">
+							<div class="task-box">
+								<div class="task-box-title" style="cursor: default;">
+									Download links
+								</div>
+								<div class="task-box-content">
+									<div class="task-box-content-small">
+										<img src="../assets/icons/184.ico">
+										<a href="../assets/src/CV.pdf" download="#" style="text-decoration: none;">Download CV</a>
+									</div>
+									<div class="task-box-content-small">
+										<img src="../assets/icons/810.ico">
+										<a href="../assets/src/Portfolio.pdf" download="#" style="text-decoration: none;">Download Portfolio</a>
+									</div>
+									
+									
+								</div>
+							</div>
 						</div>
-						<article >
-								Name / Daniela Pardiñas
-								<br>Date of Birth / 6th September 2000
-						</article>
-						<article>
-							<br>Experience
-							<br>Die Schule der magischen Tiere / Trickstudio Lutterbeck GmbH
-							<br>February 2024 - present / Remote
-							<br>Illustration / Procreate
-							<br>PAINTS / Pirogy Studios
-							<br>June 2025 - October 2025 / Remote
-							<br>2D Clean-up Artist / Blender
-							<br>BFF / Blue Faces s. r. o.
-							<br>August 2024 - June 2025 / Bratislava (SK)
-							<br>2D Animator, Layout Artist / Toon Boom Harmony
-							<br> Tender is the Knight / dir. Daniela Pardiñas & Martine Samdal
-							<br>August 2023 - June 2024 / Volda (NO)
-							<br>Direction, Lead Animation, Character Design
-							<br>Garden of Heart / dir. Olivér Hegyi
-							<br>February 2022 - May 2022 / Bratislava (SK)
-							<br>2D Animator / TV Paint
-						</article>
-						<article>
-							<br>Education
-							<br>Volda University College / Bc. in Animation
-							<br>August 2022 - June 2024 / Volda (NO)
-							<br>Academy of Performing Arts Bratislava / Animation
-							<br>September 2021 - June 2022 / Bratislava (SK)
-							<br>Universität Wien / Art History
-							<br>September 2019 - May 2021 / Vienna (AT)
-							<br>Lycée des Arts et Métiers / High School Diploma
-							<br>September 2014 - June 2019, Luxembourg (LU)
-						</article>
-						<article>
-							<br>Software
-							<br>Adobe Photoshop / Advanced
-							<br>Adobe After Effects / Intermediate
-							<br>Adobe Premiere Pro / Intermediate
-							<br>Toon Boom Harmony / Advanced
-							<br>Krita / Advanced
-							<br>Clip Studio Paint / Advanced
-							<br>TV Paint / Intermediate
-							<br>Procreate / Advanced
-							<br>HTML / Advanced
-							<br>CSS / Advanced
-							<br>JavaScript / Beginner
-						</article>
-						<article>
-							<br>Languages
-							<br>Slovak / Native
-							<br>Spanish / Native
-							<br>English / C2
-							<br>German / C2
-							<br>Czech / C2
-							<br>French / B2
-							<br>Norwegian / B2
-							<br>Luxembourgish / B2
-						</article>
-						<article>
-							<br>Hobbies & Likes
-							<br>animals, 2000s media, Horror, Sci-Fi/Fantasy books, DnD, Pokémon, coding, going to the gym, sketching people, collages, coding, music, visual novels/comics, videogames, winter,
-						</article>
+						<div class="description-small">
+							<div>
+								<div class="title">
+								Curriculum
+								</div>
+								<div class="cv-div">
+									Name / Daniela Pardiñas
+									<br>Date of Birth / 6th September 2000
+									<br>Residence / Bratislava, Slovakia
+								</div>
+								<div class="cv-div">
+									<b>Experience</b>
+									<hr>
+									<div class="cv-div-bullet">
+										<div class="bullet">
+											<img src="../assets/icons/896.ico">
+											-•
+										</div>
+										<div>
+											<a href="https://www.carlsen.de/die-schule-der-magischen-tiere" target="_blank">Die Schule der magischen Tiere / Trickstudio Lutterbeck GmbH</a>
+											<br>February 2024 - present / Remote
+											<br><i>Illustration / Procreate</i>
+										</div>
+									</div>
+									<div class="cv-div-no-bullet">
+										<a href="https://www.pirogystudios.com/" target="_blank">PAINTS / Pirogy Studios</a>
+										<br>June 2025 - October 2025 / Remote
+										<br><i>2D Clean-up Artist / Blender</i>
+									</div>
+									<div class="cv-div-no-bullet">
+										<a href="https://artshot.lt/bff/" target="_blank">BFF</a> / <a href="https://blue-faces.com/" target="_blank">Blue Faces s. r. o.</a>
+										<br>August 2024 - June 2025 / Bratislava (SK)
+										<br><i>2D Animator, Layout Artist / Toon Boom Harmony</i>
+									</div>
+									<div class="cv-div-no-bullet">
+										<a href="https://youtu.be/gBYpzZtKmhs?si=2MbnDa38rNICTzPS" target="_blank">Tender is the Knight / dir. Daniela Pardiñas & Martine Samdal</a>
+										<br>August 2023 - June 2024 / Volda (NO)
+										<br><i>Direction, Lead Animation, Character Design</i>
+									</div>
+									<div class="cv-div-no-bullet">
+										<a href="https://vimeo.com/1034765106" target="_blank">Garden of Heart / dir. Olivér Hegyi</a>
+										<br>February 2022 - May 2022 / Bratislava (SK)
+										<br><i>2D Animator / TV Paint</i>
+									</div>
+								</div>
+								<div class="cv-div">
+									<b>Education</b>
+									<hr>
+									<div class="cv-div-bullet">
+										<div class="bullet">
+											<img src="../assets/icons/426.ico">
+											-•
+										</div>
+										<div>
+											Volda University College / Bc. in Animation
+											<br>August 2022 - June 2024 / Volda (NO)
+										</div>
+									</div>
+									<div class="cv-div-no-bullet">
+										Academy of Performing Arts Bratislava / Animation
+										<br>September 2021 - June 2022 / Bratislava (SK)
+									</div>
+									<div class="cv-div-no-bullet">
+										Universität Wien / Art History
+										<br>September 2019 - May 2021 / Vienna (AT)
+									</div>
+									<div class="cv-div-no-bullet">
+										Lycée des Arts et Métiers / High School Diploma
+										<br>September 2014 - June 2019, Luxembourg (LU)
+									</div>
+								</div>
+								<div class="cv-div">
+									<b>Skills</b>
+									<hr>
+									<div class="cv-div-bullet">
+										<div class="bullet">
+											<img src="../assets/icons/92.ico">
+											-•
+										</div>
+										<div>
+											Adobe Photoshop / Advanced
+										</div>
+									</div>
+									<div class="cv-div-no-bullet" style="padding-top: 0.4em;">
+										Adobe After Effects / Intermediate
+									</div>
+									<div class="cv-div-no-bullet">
+										Adobe Premiere Pro / Intermediate
+									</div>
+									<div class="cv-div-no-bullet">
+										Toon Boom Harmony / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										Krita / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										Clip Studio Paint / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										TV Paint / Intermediate
+									</div>
+									<div class="cv-div-no-bullet">
+										Procreate / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										HTML / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										CSS / Advanced
+									</div>
+									<div class="cv-div-no-bullet">
+										JavaScript / Beginner
+									</div>
+								</div>
+								<div class="cv-div">
+									<b>Languages</b>
+									<hr>
+									<div class="cv-div-bullet">
+										<div class="bullet">
+											<img src="../assets/icons/542.ico">
+											-•
+										</div>
+										<div>
+											Slovak / Native
+										</div>
+									</div>
+									<div class="cv-div-no-bullet" style="padding-top: 0.4em;">
+										Spanish / Native
+									</div>
+									<div class="cv-div-no-bullet">
+										English / C2
+									</div>
+									<div class="cv-div-no-bullet">
+										German / C2
+									</div>
+									<div class="cv-div-no-bullet">
+										Czech / C2
+									</div>
+									<div class="cv-div-no-bullet">
+										French / B2
+									</div>
+									<div class="cv-div-no-bullet">
+										Norwegian / B2
+									</div>
+									<div class="cv-div-no-bullet">
+										Luxembourgish / B2
+									</div>
+									<div class="cv-div-no-bullet">
+										Japanese / A1
+									</div>
+								</div>
+								<div class="cv-div">
+									<b>Hobbies & Likes</b>
+									<hr>
+									<div class="cv-div-bullet">
+										<div class="bullet">
+											<img src="../assets/icons/327.ico">
+											-•
+										</div>
+										<div style="width: 100%;">
+											dogs, 2000s media, analog media, Horror, brutalist architecture, Sci-Fi/Fantasy books, DnD, Pokémon, coding, bouldering, sketching people, coding, music, visual novels/comics, videogames, fall & winter
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -624,12 +869,12 @@
 
 		<div id="contact" class="closed">
 			<div id="window-small" class="window-contact draggable resizable">
-				<div id="window-title-bar" class="handle">
-					<div class="title">
+				<div id="window-title" class="handle">
+					<p>
 						Contact me
-					</div>
+					</p>
 					<div class="title-bar-icons">
-						<button>
+						<button onclick="minimizeContact()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
 						<button>
@@ -641,38 +886,56 @@
 					</div>
 				</div>
 				<div class="content">
-					<div class="title">
-						<h1>Contact me</h1>
-					</div>
-					<div class="description">
-						<article>
-							My work on the <a href="#" onclick="openDsdmt()">book series</a> is scheduled until Christmas 2027, so I won't be able to undertake any full-time jobs until then. But if you'd like to have a commission done, or you need part-time help on your project, please don't hesitate to reach out!
-						</article>
-						<div class="small-box">
-							<header>
-								You can reach me during working hours at...
-							</header>
-							<article>
-								Phone, WhatsApp, Signal / <a href="tel:00421917666741">+421 917 666 741</a>
-								<br>E-mail / <a href="mailto:denusaurus@proton.me" target="_blank">denusaurus@proton.me</a>
-								<br>(I typically reply by the next working day)</article>
+					<div class="content-area-small">
+						<div style="padding: 1em;">
+							<img src="../assets/icons/1012.ico" alt="">
 						</div>
-						<div class="small-box">
-							<header>
-								...or DM me on Discord
-							</header>
+						<div class="description-small">
+							<div class="title">
+								Contact me
+							</div>
 							<article>
-								<a href="https://discord.com/users/dumbassaurus">@dumbassaurus</a>
+								My work on the <a href="#" onclick="openDsdmt()">book series</a> is scheduled until May 2027, so I won't be able to undertake any full-time jobs until then. But if you'd like to have a commission done, or you need part-time help on your project, please don't hesitate to reach out!
 							</article>
-						</div>
-						<div class="small-box">
-							<header>
-								Other social media
-							</header>
 							<article>
-								YouTube / <a href="https://www.youtube.com/@dumbassaurus">@dumbassaurus</a>
-								<br>LinkedIn / <a href="https://www.linkedin.com/in/pardinasdaniela/">pardinasdaniela</a>
-								<br>Letterboxd / <a href="https://letterboxd.com/denusaurus/">denusaurus</a>
+								<b>You can reach me during working hours at...</b>
+							</article>
+							<div class="cv-div-bullet">
+								<div class="bullet">
+									<img src="../assets/icons/1279.ico">
+									-•
+								</div>
+								<div>
+									Phone, WhatsApp, Signal / <a href="tel:00421917666741">+421 917 666 741</a>
+									<br>E-mail / <a href="mailto:denusaurus@proton.me" target="_blank">denusaurus@proton.me</a>
+									<br>(I typically reply by the next working day)
+								</div>
+							</div>
+							<article>
+								<b>...or DM me on Discord:</b>
+							</article>
+							<div class="cv-div-bullet">
+								<div class="bullet">
+									<img src="../assets/icons/1087.ico">
+									-•
+								</div>
+								<a href="https://discord.com/users/dumbassaurus">@dumbassaurus</a>
+							</div>
+							<article>
+								<b>Other social media:</b>
+							</article>
+							<div class="cv-div-bullet">
+								<div class="bullet">
+									<img src="../assets/icons/938.ico">
+									-•
+								</div>
+								<div>
+									YouTube / <a href="https://www.youtube.com/@dumbassaurus">@dumbassaurus</a>
+									<br>LinkedIn / <a href="https://www.linkedin.com/in/pardinasdaniela/">pardinasdaniela</a>
+									<br>Letterboxd / <a href="https://letterboxd.com/denusaurus/">denusaurus</a>
+								</div>
+							</div>
+								
 							</article>
 						</div>
 					</div>
@@ -731,6 +994,15 @@
 			</button>
 			<button onclick="openPerson()" id="person-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Personal art
+			</button>
+			<button onclick="openAbout()" id="about-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">About me
+			</button>
+			<button onclick="openCV()" id="cv-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">CV
+			</button>
+			<button onclick="openContact()" id="contact-tab" class="taskbar-tab">
+				<img src="../assets/icons/23.ico">Contact
 			</button>
 		</div>
 		<div class="clock">

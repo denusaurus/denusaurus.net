@@ -133,6 +133,30 @@ function minimizePerson() {
   personT.classList.remove("pressed");
 }
 
+const aboutT = document.getElementById("about-tab")
+
+function minimizeAbout() {
+  about.className = "closed";
+  aboutT.style.display = "flex";
+  aboutT.classList.remove("pressed");
+}
+
+const cvT = document.getElementById("cv-tab")
+
+function minimizeCv() {
+  cv.className = "closed";
+  cvT.style.display = "flex";
+  cvT.classList.remove("pressed");
+}
+
+const contactT = document.getElementById("contact-tab")
+
+function minimizeContact() {
+  contact.className = "closed";
+  contactT.style.display = "flex";
+  contactT.classList.remove("pressed");
+}
+
 // open & close
 
 const dsdmt = document.getElementById("dsdmt")
@@ -194,21 +218,27 @@ function closePerson() {
 const about = document.getElementById("about")
 
 function openAbout() {
-  about.className = 'open';
+  about.className = "open";
+  aboutT.style.display = "flex";
+  aboutT.classList.add("pressed");
 }
 
 function closeAbout () {
   about.className = 'closed';
+  aboutT.style.display = "none";
 }
 
 const cv = document.getElementById("cv")
 
 function openCV() {
   cv.className = 'open';
+  cvT.style.display = "flex";
+  cvT.classList.add("pressed");
 }
 
 function closeCV () {
   cv.className = 'closed';
+  cvT.style.display = "none";
 }
 
 const contact = document.getElementById("contact")
@@ -219,12 +249,15 @@ function openContact() {
   contact.className = 'open';
   bubbleDefault.classList.replace("open", "closed");
   bubbleContact.classList.replace("closed", "open");
+  contactT.style.display = "flex";
+  contactT.classList.add("pressed");
 }
 
 function closeContact () {
   contact.className = 'closed';
   bubbleDefault.classList.replace("closed", "open");
   bubbleContact.classList.replace("open", "closed");
+  contactT.style.display = "none";
 }
 
 const start = document.getElementById("start-window")
@@ -299,28 +332,28 @@ interact('.resizable')
 
 // gallery toggle
 
-var galleryA = document.getElementById("gallery-a");
-var galleryB = document.getElementById("gallery-b");
-var tasktitleA = document.getElementById("tasktitle-a");
-var taskcontA = document.getElementById("taskcont-a")
+const galleryA = document.getElementById("gallery-a")
+const galleryB = document.getElementById("gallery-b")
+const galleryC = document.getElementById("gallery-c")
 
 function toggleA() {
   galleryA.style.display = "flex";
   galleryB.style.display = "none";
-  tasktitleA.classList.remove("task-box-title");
-  tasktitleA.classList.add("task-box-title-active");
-  taskcontA.classList.remove("task-box-content");
-  taskcontA.classList.add("task-box-content-active");
+  galleryC.style.display = "none";
+  var element = document.getElementById("tasktitle-a");
+  element.classList.toggle("active");
 }
 
 function toggleB() {
   galleryB.style.display = "flex";
   galleryA.style.display = "none";
-  tasktitleA.classList.remove("task-box-title-active");
-  tasktitleA.classList.add("task-box-title");
-  taskcontA.classList.remove("task-box-content-active");
-  taskcontA.classList.add("task-box-content");
-  
+  galleryC.style.display = "none";
+}
+
+function toggleC() {
+  galleryC.style.display = "flex";
+  galleryA.style.display = "none";
+  galleryB.style.display = "none";
 }
 
 // clippy toggle

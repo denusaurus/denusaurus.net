@@ -45,6 +45,29 @@ article {
     background-color: rgba(183, 211, 252, 0.196);
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .clicked {
     border: 1px solid rgb(131, 166, 252);
     background-color: rgba(183, 211, 252, 0.518);
@@ -91,7 +114,7 @@ article {
     box-sizing: border-box;
     position: absolute;
     left: 10%;
-    top: -40vh;
+    top: -30vh;
     transform: translate(0px, 0px);
     border: 4px outset var(--window-blue-3);
     width: 1140px;
@@ -112,8 +135,10 @@ article {
     top: -20vh;
     transform: translate(0px, 0px);
     border: 4px outset var(--window-blue-3);
-    width: 500px;
+    width: 600px;
     height: 550px;
+    min-width: 520px;
+    min-height: 450px;
     background-color: white;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
@@ -150,7 +175,7 @@ article {
     display: flex;
     flex-direction: column;
     border: 4px inset var(--window-blue-1);
-    overflow: hidden;
+    width: 100%;
 }
 
 .description {
@@ -204,7 +229,7 @@ article {
     cursor: pointer;
 }
 
-.task-box-title-active {
+.task-box-title.active {
     color: white;
     padding: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -215,7 +240,7 @@ article {
     background: linear-gradient(45deg, rgba(3, 72, 184, 1) 0%, rgba(39, 91, 203, 1) 79%);
 }
 
-.task-box-title-active:hover {
+.task-box-title.active:hover {
     cursor: pointer;
 }
 
@@ -226,11 +251,19 @@ article {
     font-size: 9pt;
 }
 
-.task-box-content-active {
+.task-box-content.active {
     background-color: white;
     padding: 1em;
     font-family: Tahoma;
     font-size: 9pt;
+}
+
+.task-box-content a {
+    color: #0348B8;
+}
+
+.gallery-area {
+    overflow-y: scroll;
 }
 
 .gallery {
@@ -242,7 +275,6 @@ article {
     font-family: 'Tahoma';
     font-size: 10pt;
     text-align: center;
-    overflow-y: scroll;
 }
 
 .portfolio-image {
@@ -357,47 +389,84 @@ article {
 
 .content-area-small {
     display: flex;
-    overflow: hidden;
-    padding: 1em;
-    gap: 1em;
+    overflow: auto;
 }
 
 .sidebar-small {
-    padding: ;
+    font-family: 'Tahoma';
+    padding: 0.6em;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.6em;
+    font-size: 11pt;
+    background: linear-gradient( rgb(122, 161, 231) 0%, rgb(99, 117, 215) 100%);
+}
+
+.task-box-content-small {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: flex-start;
 }
 
 .description-small {
     font-family: 'Tahoma';
     font-size: 11pt;
     display: flex;
-    flex-flow: column wrap;
-    gap: 1em;
+    flex-flow: column ;
+    padding: 1em;
+    overflow-x: hidden;
+    size: 100%;
+    width: 100%;
+}
+
+.description-small article {
+    padding-top: 1em;
+}
+
+.cv-div {
+    padding-top: 1em;
+}
+
+.cv-div hr {
+    position: relative;
+    left: -1em;
+    border: 0;
+    height: 2px;
+    background: #9ec9fa;
+    background: linear-gradient(90deg,rgba(210, 236, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 500px;
+}
+
+.cv-div-bullet {
+    padding-top: 1em;
     display: flex;
-    flex-flow: column wrap;
+    gap: 1em;
+    align-items: center;
 }
 
-.small-box header {
-    background: linear-gradient(90deg, white 75%, var(--box-lightblue) 100%);
-    padding: 10px 0 5px 20px;
-    color: var(--taskbar-blue-2);
-    border-radius: 5px 5px 0 0;
-    font-family: 'Verdana';
-    font-weight: bold;
+.bullet {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: none;
+    font-size: 18pt;
+    color: var(--window-blue-2);
+    letter-spacing: -5px;
 }
 
-.small-box article {
-    padding: 10px;
-    background-color: var(--box-lightblue);
-    color: var(--taskbar-blue-1);
-    font-family: 'Tahoma';
-    font-size: 10pt;
-    line-height: 2;
-    text-align: justify;
+.bullet img {
+    border: 2px solid var(--window-blue-2);
+    border-radius: 100%;
+    position: relative;
+    right: -2px;
+    background: #4BC1EB;
+    background: linear-gradient(180deg,rgba(75, 193, 235, 1) 0%, rgba(254, 253, 255, 1) 100%);
 }
 
-.small-box a {
-    text-decoration: none;
-    color: black;
+.cv-div-no-bullet {
+    padding-left: 4.1em;
+    padding-top: 1em;
 }
 
 .bio {
@@ -532,6 +601,11 @@ footer {
 	height: 100vh;
 	width: 100vw;
 }
+
+a:link{color:inherit}
+a:active{color:inherit}
+a:visited{color:inherit}
+a:hover{color:inherit}
 
 :root {
 	--lightgrey: rgb(165, 165, 157);
