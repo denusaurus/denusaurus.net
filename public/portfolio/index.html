@@ -11,7 +11,7 @@
 	<link href="../css/responsive_layout.css" rel="stylesheet" media="all">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"/>
 	<!--scripts-->
-	<script defer src="../js/script.js"></script>
+	<script defer src="../js/portfolio.js"></script>
 	<script src=" https://cdn.jsdelivr.net/npm/interactjs@1.10.27/dist/interact.min.js "></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
 	<!--meta tags-->
@@ -38,10 +38,9 @@
 
 	<main>
 		<div class="desktop-icons">
-			<button id="dsdmt-folder" onclick="highlightDsdmt()" ondblclick="openDsdmt()" class="unclicked tooltip">
+			<button id="dsdmt-folder" onclick="highlightDsdmt()" ondblclick="openDsdmt()" class="unclicked">
 				<img src="../assets/icons/23.ico">
 				<p>Die Schule der magischen Tiere</p>
-				<span class="tooltiptext">Die Schule der magischen Tiere</span>
 			</button>
 			<button id="titk-folder" onclick="highlightTitk()" ondblclick="openTitk()" class="unclicked">
 				<img src="../assets/icons/23.ico">
@@ -57,7 +56,7 @@
 			</button>
 		</div>
 
-		<div id="dsdmt" class="open">
+		<div id="dsdmt" class="closed">
 			<div id="window" class="window-dsdmt draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
@@ -573,6 +572,7 @@
 					<h1>Daniela Pardiñas</h1>
 				</div>
 				<div class="start-content">
+					<hr class="start-hr">
 					<div class="link">
 						<button onclick="openAbout()">
 							<img src="../assets/icons/206.ico" class="link-icon">
@@ -856,7 +856,7 @@
 											-•
 										</div>
 										<div style="width: 100%;">
-											dogs, 2000s media, analog media, Horror, brutalist architecture, Sci-Fi/Fantasy books, DnD, Pokémon, coding, bouldering, sketching people, coding, music, visual novels/comics, videogames, fall & winter
+											dogs / 2000s media / analog media / horror / brutalist architecture / sci-Fi/fantasy / DnD / Pokémon / coding / bouldering / sketching people / coding / music / videogames / fall & winter / coffee & tea / reading
 										</div>
 									</div>
 								</div>
@@ -943,7 +943,7 @@
 			</div>
 		</div>
 
-		<div id="clippy">
+		<div id="clippy" onclick="clippyToggle()">
 			<div id="bubble-default" class="speech-bubble open">
 				<article>
 					Looks like you're viewing Dani's portfolio!
@@ -983,25 +983,25 @@
 			</button>
 		</div>
 		<div class="taskbar">
-			<button onclick="openDsdmt()" id="dsdmt-tab" class="taskbar-tab">
+			<button onclick="toggleDsdmt()" id="dsdmt-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Die Schule der magischen Tiere
 			</button>
-			<button onclick="openTitk()" id="titk-tab" class="taskbar-tab">
+			<button onclick="toggleTitk()" id="titk-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Tender is the Knight
 			</button>
-			<button onclick="openChara()" id="chara-tab" class="taskbar-tab">
+			<button onclick="toggleChara()" id="chara-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Character design
 			</button>
-			<button onclick="openPerson()" id="person-tab" class="taskbar-tab">
+			<button onclick="togglePerson()" id="person-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Personal art
 			</button>
-			<button onclick="openAbout()" id="about-tab" class="taskbar-tab">
+			<button onclick="toggleAbout()" id="about-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">About me
 			</button>
-			<button onclick="openCV()" id="cv-tab" class="taskbar-tab">
+			<button onclick="toggleCv()" id="cv-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">CV
 			</button>
-			<button onclick="openContact()" id="contact-tab" class="taskbar-tab">
+			<button onclick="toggleContact()" id="contact-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Contact
 			</button>
 		</div>

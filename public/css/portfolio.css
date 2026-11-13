@@ -6,14 +6,10 @@
 
 body {
 	background-image: url("../assets/images/portfolio/Bliss.png");
-	background-size: 100vw 100vh;
+	background-size: cover;
     background-attachment: fixed;
     overflow-y: hidden;
     overflow-x: hidden;
-}
-
-main {
-    height: 100vw;
 }
 
 button {
@@ -43,29 +39,6 @@ article {
 .unclicked:hover {
     border: 1px solid rgb(131, 166, 252);
     background-color: rgba(183, 211, 252, 0.196);
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-  cursor: pointer;
-}
-
-.tooltiptext {
-  visibility: hidden;
-  width: 130px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
 }
 
 .clicked {
@@ -299,13 +272,13 @@ article {
 
 #start-window {
     position: fixed;
-    bottom: 39px;
+    bottom: 38px;
 }
 
 #start-menu {
     background-color: var(--folder-lightblue);
     height: 50vh;
-    width: 20vw;
+    width: 350px;
     border: 3px outset var(--window-blue-3);
     border-radius: 15px 15px 0 0;
     display: flex;
@@ -345,7 +318,13 @@ article {
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
-    border-top: 2px solid orange;
+}
+
+.start-hr {
+    border: 0;
+    height: 2px;
+    background: #F98B33;
+    background: radial-gradient(circle, rgba(249, 139, 51, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .link {
@@ -493,6 +472,7 @@ article {
     border: 2px solid black;
 	border-radius: .4em;
     width: 140px;
+    display: block;
 }
 
 .speech-bubble article {
@@ -555,17 +535,17 @@ footer {
 }
 
 .taskbar-tab {
-  background-image: linear-gradient(to bottom, var(--taskbar-blue-1) 0%, var(--taskbar-blue-2) 10%, var(--taskbar-blue-3) 100%);
-  border: 2px outset var(--taskbar-blue-3);
-  color: white;
-  margin: 4px 1px;
-  padding: 5px 10px;
-  display: none;
-  align-items: center;
-  gap: 2px;
-  font-family: Tahoma;
-  font-size: 9pt;
-  cursor: pointer;
+    background-image: linear-gradient(to bottom, var(--taskbar-blue-1) 0%, var(--taskbar-blue-2) 10%, var(--taskbar-blue-3) 100%);
+    border: 2px outset var(--taskbar-blue-3);
+    color: white;
+    margin: 4px 1px;
+    padding: 5px 10px;
+    display: none;
+    align-items: center;
+    gap: 2px;
+    font-family: Tahoma;
+    font-size: 9pt;
+    cursor: pointer;
 }
 
 .taskbar-tab img {

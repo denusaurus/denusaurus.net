@@ -43,7 +43,7 @@ function highlightDsdmt() {
 window.addEventListener('click', function(e){
   if (this.document.getElementById("dsdmt-folder").contains(e.target)){
     dsdmtF.className = "clicked";
-  } else{
+  } else {
     dsdmtF.className = "unclicked";
   }
 })
@@ -60,7 +60,7 @@ function highlightTitk() {
 window.addEventListener('click', function(e){
   if (this.document.getElementById("titk-folder").contains(e.target)){
     titkF.className = "clicked";
-  } else{
+  } else {
     titkF.className = "unclicked";
   }
 })
@@ -77,7 +77,7 @@ function highlightChara() {
 window.addEventListener('click', function(e){
   if (this.document.getElementById("chara-folder").contains(e.target)){
     charaF.className = "clicked";
-  } else{
+  } else {
     charaF.className = "unclicked";
   }
 })
@@ -94,67 +94,101 @@ function highlightPerson() {
 window.addEventListener('click', function(e){
   if (this.document.getElementById("person-folder").contains(e.target)){
     personF.className = "clicked";
-  } else{
+  } else {
     personF.className = "unclicked";
   }
 })
 
 // tabs
-
 const dsdmtT = document.getElementById("dsdmt-tab")
 
-function minimizeDsdmt() {
-  dsdmt.className = "closed";
-  dsdmtT.style.display = "flex";
-  dsdmtT.classList.remove("pressed");
+function toggleDsdmt() {
+
+  if (dsdmt.className == "closed") {
+    dsdmt.className = "open";
+    dsdmtT.classList.add("pressed");
+  } else {
+    dsdmt.className = "closed";
+    dsdmtT.classList.remove("pressed");
+  }
 }
 
 const titkT = document.getElementById("titk-tab")
 
-function minimizeTitk() {
-  titk.className = "closed";
-  titkT.style.display = "flex";
-  titkT.classList.remove("pressed");
+function toggleTitk() {
+
+  if (titk.className == "closed") {
+    titk.className = "open";
+    titkT.classList.add("pressed");
+  } else {
+    titk.className = "closed";
+    titkT.classList.remove("pressed");
+  }
 }
 
 const charaT = document.getElementById("chara-tab")
 
-function minimizeChara() {
-  chara.className = "closed";
-  charaT.style.display = "flex";
-  charaT.classList.remove("pressed");
+function toggleChara() {
+
+  if (chara.className == "closed") {
+    chara.className = "open";
+    charaT.classList.add("pressed");
+  } else {
+    chara.className = "closed";
+    charaT.classList.remove("pressed");
+  }
 }
 
 const personT = document.getElementById("person-tab")
 
-function minimizePerson() {
-  person.className = "closed";
-  personT.style.display = "flex";
-  personT.classList.remove("pressed");
+function togglePerson() {
+
+  if (person.className == "closed") {
+    person.className = "open";
+    personT.classList.add("pressed");
+  } else {
+    person.className = "closed";
+    personT.classList.remove("pressed");
+  }
 }
 
 const aboutT = document.getElementById("about-tab")
 
-function minimizeAbout() {
-  about.className = "closed";
-  aboutT.style.display = "flex";
-  aboutT.classList.remove("pressed");
+function toggleAbout() {
+
+  if (about.className == "closed") {
+    about.className = "open";
+    aboutT.classList.add("pressed");
+  } else {
+    about.className = "closed";
+    aboutT.classList.remove("pressed");
+  }
 }
 
 const cvT = document.getElementById("cv-tab")
 
-function minimizeCv() {
-  cv.className = "closed";
-  cvT.style.display = "flex";
-  cvT.classList.remove("pressed");
+function toggleCv() {
+
+  if (cv.className == "closed") {
+    cv.className = "open";
+    cvT.classList.add("pressed");
+  } else {
+    cv.className = "closed";
+    cvT.classList.remove("pressed");
+  }
 }
 
 const contactT = document.getElementById("contact-tab")
 
-function minimizeContact() {
-  contact.className = "closed";
-  contactT.style.display = "flex";
-  contactT.classList.remove("pressed");
+function toggleContact() {
+
+  if (contact.className == "closed") {
+    contact.className = "open";
+    contactT.classList.add("pressed");
+  } else {
+    contact.className = "closed";
+    contactT.classList.remove("pressed");
+  }
 }
 
 // open & close
@@ -273,6 +307,50 @@ function leavePortfolio() {
   location.href = "shutdown.html";
 }
 
+// minimize
+
+function minimizeDsdmt() {
+  dsdmt.className = 'closed';
+  dsdmtT.style.display = "flex";
+  dsdmtT.classList.remove("pressed");
+}
+
+function minimizeTitk() {
+  titk.className = 'closed';
+  titkT.style.display = "flex";
+  titkT.classList.remove("pressed");
+}
+
+function minimizeChara() {
+  chara.className = 'closed';
+  charaT.style.display = "flex";
+  charaT.classList.remove("pressed");
+}
+
+function minimizePerson() {
+  person.className = 'closed';
+  personT.style.display = "flex";
+  personT.classList.remove("pressed");
+}
+
+function minimizeAbout() {
+  about.className = 'closed';
+  aboutT.style.display = "flex";
+  aboutT.classList.remove("pressed");
+}
+
+function minimizeCv() {
+  cv.className = 'closed';
+  cvT.style.display = "flex";
+  cvT.classList.remove("pressed");
+}
+
+function minimizeContact() {
+  contact.className = 'closed';
+  contactT.style.display = "flex";
+  contactT.classList.remove("pressed");
+}
+
 // drag
 
 interact('.draggable')
@@ -380,4 +458,23 @@ if (checkedBox.checked == true){
   } else {
     youFool.style.display = "none";
   }
+}
+
+function clippyToggle() {
+
+var bubbleD = document.getElementById("bubble-default")
+var bubbleC = document.getElementById("bubble-contact")
+
+  if (bubbleD.style.display == "none"){
+      bubbleD.style.display = "block";
+    } else {
+      bubbleD.style.display = "none";
+    }
+  
+  if (bubbleC.style.display == "none"){
+      bubbleC.style.display = "block";
+    } else {
+      bubbleC.style.display = "none";
+    }
+
 }
