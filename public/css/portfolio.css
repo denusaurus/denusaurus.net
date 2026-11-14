@@ -376,6 +376,10 @@ article {
     overflow: auto;
 }
 
+.content-area-small-icon {
+    padding: 1em;
+}
+
 .sidebar-small {
     font-family: 'Tahoma';
     padding: 0.6em;

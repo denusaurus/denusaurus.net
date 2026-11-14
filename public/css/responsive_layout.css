@@ -15,10 +15,16 @@
         gap: 10px;
     }
 
-	#window {
+	#window, #window-small {
 		min-width: 300px;
 		width: 300px;
 		min-height: 320px;
+		height: 500px;
+		left: 10%;
+	}
+
+	#window-title {
+		padding-left: 12px;
 	}
 
 	.header-button-div {
@@ -27,7 +33,7 @@
 	}
 
 	.header-button {
-		height: 16px;
+		height: 20px;
 	}
 
 	#content {
@@ -42,16 +48,43 @@
 		font-size: 18pt;
 	}
 
+	.article {
+		font-size: 10pt;
+	}
+
+	.cv-div-bullet {
+		font-size: 10pt;
+	}
+
 	.content-area {
-		flex-flow: column wrap;
+		flex-flow: column nowrap;
+		overflow: visible;
+	}
+
+	.content-area-small {
+		flex-flow: column nowrap;
+		overflow-y: visible;
+	}
+
+	.content-area-small-icon {
+		display: none;
+	}
+
+	.description-small {
+		overflow-y: visible;
+		font-size: 10pt;
 	}
 
 	.gallery-area {
-		overflow-y: hidden;
+		overflow-y: visible;
 	}
 
 	.sidebar {
 		flex: 0 0 0;
+	}
+
+	.cv-profile-pic {
+		height: 100px;
 	}
 
 	.task-box-content {
@@ -63,12 +96,12 @@
 	}
 
 	.portfolio-image {
-		height: 100px;
-		width: 100px;
+		height: 250px;
+		width: 250px;
 	}
 
-	#window-small {
-		left: 10%;
+	.portfolio-image img {
+		max-height: 240px;
 	}
 
 	#start-window {

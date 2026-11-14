@@ -56,7 +56,7 @@
 			</button>
 		</div>
 
-		<div id="dsdmt" class="open">
+		<div id="dsdmt" class="closed">
 			<div id="window" class="window-dsdmt draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
@@ -215,7 +215,7 @@
 					<p>
 						Tender is the Knight
 					</p>
-					<div>
+					<div class="header-button-div">
 						<button onclick="minimizeTitk()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -389,7 +389,7 @@
 					<p>
 						Character design
 					</p>
-					<div>
+					<div class="header-button-div">
 						<button onclick="minimizeChara()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -452,7 +452,7 @@
 					<p>
 						Personal art
 					</p>
-					<div>
+					<div class="header-button-div">
 						<button onclick="minimizePerson()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -464,7 +464,7 @@
 						</button>
 					</div>
 				</div>
-				<div class="content">
+				<div id="content">
 					<div class="description">
 						<div class="title">
 							Personal art
@@ -660,7 +660,7 @@
 					<p>
 						About me
 					</p>
-					<div class="title-bar-icons">
+					<div class="header-button-div">
 						<button onclick="minimizeAbout()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -672,39 +672,41 @@
 						</button>
 					</div>
 				</div>
-				<div class="content-area-small noscroll">
-					<div style="padding: 1em;">
-						<img src="../assets/icons/1078.ico">
-					</div>
-					<div class="description-small">
-						<div class="title">
-							About me
+				<div id="content">
+					<div class="content-area-small">
+						<div class="content-area-small-icon">
+							<img src="../assets/icons/1078.ico">
 						</div>
-						<article>
-							Hi! I'm Dani (she/her).
-							<br>I'm a 26 year-old freelancing artist based in Bratislava, Slovakia.
-						</article>
-						<article>
-							I have a Bachelor in Animation from Volda University College in Norway and I've worked on different animated short films and TV series and I'm currently illustrating a <a href="#" onclick="openDsdmt()">children's book series</a>.
-						</article>
-						<article>
-							Always nagged by teachers for doodling and not paying attention, my passion for art turned serious when I chose an art high school and extracurricular drawing classes where I could flourish. I briefly studied art history at the University of Vienna, Austria, but interrupted my boring academic studies to regain my passion by pursuing animation in my hometown. After a very convincing Erasmus semester, I finished my degree in Norway.
-						</article>
-						<article>
-							In my spare time I enjoy working on <a href="#" onclick="openPerson()">my own creative projects</a>, tinkering on my website, playing videogames and going on adventures with my dog. I also speak eight languages and I'm learning FIVE more (HTML, CSS, JavaScript, Japanese and Dog).
-						</article>
-					</div>	
+						<div class="description-small">
+							<div class="title">
+								About me
+							</div>
+							<article>
+								Hi! I'm Dani (she/her).
+								<br>I'm a 26 year-old freelancing artist based in Bratislava, Slovakia.
+							</article>
+							<article>
+								I have a Bachelor in Animation from Volda University College in Norway and I've worked on different animated short films and TV series and I'm currently illustrating a <a href="#" onclick="openDsdmt()">children's book series</a>.
+							</article>
+							<article>
+								Always nagged by teachers for doodling and not paying attention, my passion for art turned serious when I chose an art high school and extracurricular drawing classes where I could flourish. I briefly studied art history at the University of Vienna, Austria, but interrupted my boring academic studies to regain my passion by pursuing animation in my hometown. After a very convincing Erasmus semester, I finished my degree in Norway.
+							</article>
+							<article>
+								In my spare time I enjoy working on <a href="#" onclick="openPerson()">my own creative projects</a>, tinkering on my website, playing videogames and going on adventures with my dog. I also speak eight languages and I'm learning FIVE more (HTML, CSS, JavaScript, Japanese and Dog).
+							</article>
+						</div>	
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="cv" class="closed">
+		<div id="cv" class="open">
 			<div id="window-small" class="window-cv draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
 						CV
 					</p>
-					<div class="title-bar-icons">
+					<div class="header-button-div">
 						<button onclick="minimizeCv()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -719,12 +721,12 @@
 				<div id="content">
 					<div class="content-area-small">
 						<div class="sidebar-small">
-							<img src="../assets/images/portfolio/profile_pic.jpeg" style="height: 200px; border: 1px solid var(--lightgrey);">
+							<img src="../assets/images/portfolio/profile_pic.jpeg" style="height: 200px; border: 1px solid var(--lightgrey);" class="cv-profile-pic">
 							<div class="task-box">
 								<div class="task-box-title" style="cursor: default;">
 									Download links
 								</div>
-								<div class="task-box-content">
+								<div class="task-box-content" style="display: flex; flex-flow: column wrap;">
 									<div class="task-box-content-small">
 										<img src="../assets/icons/184.ico">
 										<a href="../assets/src/CV.pdf" download="#" style="text-decoration: none;">Download CV</a>
@@ -915,7 +917,7 @@
 					<p>
 						Contact me
 					</p>
-					<div class="title-bar-icons">
+					<div class="header-button-div">
 						<button onclick="minimizeContact()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -927,9 +929,9 @@
 						</button>
 					</div>
 				</div>
-				<div class="content">
+				<div id="content">
 					<div class="content-area-small">
-						<div style="padding: 1em;">
+						<div class="content-area-small-icon" style="padding: 1em;">
 							<img src="../assets/icons/1012.ico" alt="">
 						</div>
 						<div class="description-small">
@@ -948,7 +950,7 @@
 									-•
 								</div>
 								<div>
-									Phone, WhatsApp, Signal / <a href="tel:00421917666741">+421 917 666 741</a>
+									Phone & WhatsApp / <a href="tel:00421917666741">+421 917 666 741</a>
 									<br>E-mail / <a href="mailto:denusaurus@proton.me" target="_blank">denusaurus@proton.me</a>
 									<br>(I typically reply by the next working day)
 								</div>
@@ -1029,22 +1031,22 @@
 				<img src="../assets/icons/23.ico"><p>Die Schule der magischen Tiere</p>
 			</button>
 			<button onclick="toggleTitk()" id="titk-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Tender is the Knight
+				<img src="../assets/icons/23.ico"><p>Tender is the Knight</p>
 			</button>
 			<button onclick="toggleChara()" id="chara-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Character design
+				<img src="../assets/icons/23.ico"><p>Character design</p>
 			</button>
 			<button onclick="togglePerson()" id="person-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Personal art
+				<img src="../assets/icons/23.ico"><p>Personal art</p>
 			</button>
 			<button onclick="toggleAbout()" id="about-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">About me
+				<img src="../assets/icons/23.ico"><p>About me</p>
 			</button>
 			<button onclick="toggleCv()" id="cv-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">CV
+				<img src="../assets/icons/23.ico"><p>CV</p>
 			</button>
 			<button onclick="toggleContact()" id="contact-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Contact
+				<img src="../assets/icons/23.ico"><p>Contact</p>
 			</button>
 		</div>
 		<div class="clock">
