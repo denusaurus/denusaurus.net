@@ -416,45 +416,122 @@ interact('.resizable')
 // bring to top
 
 // gallery toggle
+  
+const DttA = document.getElementById("dsdmt-tasktitle-a");
+const DtcA = document.getElementById("dsdmt-taskcont-a");
+const DgA = document.getElementById("dsdmt-gallery-a");
+const DttB = document.getElementById("dsdmt-tasktitle-b");
+const DtcB = document.getElementById("dsdmt-taskcont-b");
+const DgB = document.getElementById("dsdmt-gallery-b");
 
-const galleryA = document.getElementById("gallery-a")
-const galleryB = document.getElementById("gallery-b")
-const galleryC = document.getElementById("gallery-c")
-const ttitleA = document.getElementById("tasktitle-a")
-const ttitleB = document.getElementById("tasktitle-b")
-const ttitleC = document.getElementById("tasktitle-c")
-const tcontA = document.getElementById("taskcont-a")
-const tcontB = document.getElementById("taskcont-b")
-const tcontC = document.getElementById("taskcont-c")
-
-function toggleA() {
-  galleryA.style.display = "flex";
-  galleryB.style.display = "none";
-  ttitleA.classList.add("active");
-  ttitleB.classList.remove("active");
-  tcontA.classList.add("active");
-  tcontB.classList.remove("active");
+function dsdmtA() {
+  DttA.classList.add("active");
+  DtcA.classList.add("active");
+  DttB.classList.remove("active");
+  DtcB.classList.remove("active");
+  DgA.style.display = "flex";
+  DgB.style.display = "none";
 }
 
-function toggleB() {
-  galleryA.style.display = "none";
-  galleryB.style.display = "flex";
-  ttitleA.classList.remove("active");
-  ttitleB.classList.add("active");
-  tcontA.classList.remove("active");
-  tcontB.classList.add("active");
+function dsdmtB() {
+  DttA.classList.remove("active");
+  DtcA.classList.remove("active");
+  DttB.classList.add("active");
+  DtcB.classList.add("active");
+  DgA.style.display = "none";
+  DgB.style.display = "flex";
 }
 
-function toggleC() {
-  galleryA.style.display = "none";
-  galleryB.style.display = "none";
-  galleryC.style.display = "flex";
-  ttitleA.classList.remove("active");
-  ttitleB.classList.remove("active");
-  ttitleC.classList.add("active");
-  tcontA.classList.remove("active");
-  tcontB.classList.remove("active");
-  tcontC.classList.add("active");
+const TttA = document.getElementById("titk-tasktitle-a");
+const TtcA = document.getElementById("titk-taskcont-a");
+const TgA = document.getElementById("titk-gallery-a");
+const TttB = document.getElementById("titk-tasktitle-b");
+const TtcB = document.getElementById("titk-taskcont-b");
+const TgB = document.getElementById("titk-gallery-b");
+const TttC = document.getElementById("titk-tasktitle-c");
+const TtcC = document.getElementById("titk-taskcont-c");
+const TgC = document.getElementById("titk-gallery-c");
+
+function titkA() {
+  TttA.classList.add("active");
+  TtcA.classList.add("active");
+  TttB.classList.remove("active");
+  TtcB.classList.remove("active");
+  TttC.classList.remove("active");
+  TtcC.classList.remove("active");
+  TgA.style.display = "flex";
+  TgB.style.display = "none";
+  TgC.style.display = "none";
+}
+
+function titkB() {
+  TttA.classList.remove("active");
+  TtcA.classList.remove("active");
+  TttB.classList.add("active");
+  TtcB.classList.add("active");
+  TttC.classList.remove("active");
+  TtcC.classList.remove("active");
+  TgA.style.display = "none";
+  TgB.style.display = "flex";
+  TgC.style.display = "none";
+}
+
+function titkC() {
+  TttA.classList.remove("active");
+  TtcA.classList.remove("active");
+  TttB.classList.remove("active");
+  TtcB.classList.remove("active");
+  TttC.classList.add("active");
+  TtcC.classList.add("active");
+  TgA.style.display = "none";
+  TgB.style.display = "none";
+  TgC.style.display = "flex";
+}
+
+const PttA = document.getElementById("person-tasktitle-a");
+const PtcA = document.getElementById("person-taskcont-a");
+const PgA = document.getElementById("person-gallery-a");
+const PttB = document.getElementById("person-tasktitle-b");
+const PtcB = document.getElementById("person-taskcont-b");
+const PgB = document.getElementById("person-gallery-b");
+const PttC = document.getElementById("person-tasktitle-c");
+const PtcC = document.getElementById("person-taskcont-c");
+const PgC = document.getElementById("person-gallery-c");
+
+function personA() {
+  PttA.classList.add("active");
+  PtcA.classList.add("active");
+  PttB.classList.remove("active");
+  PtcB.classList.remove("active");
+  PttC.classList.remove("active");
+  PtcC.classList.remove("active");
+  PgA.style.display = "flex";
+  PgB.style.display = "none";
+  PgC.style.display = "none";
+}
+
+function personB() {
+  PttA.classList.remove("active");
+  PtcA.classList.remove("active");
+  PttB.classList.add("active");
+  PtcB.classList.add("active");
+  PttC.classList.remove("active");
+  PtcC.classList.remove("active");
+  PgA.style.display = "none";
+  PgB.style.display = "flex";
+  PgC.style.display = "none";
+}
+
+function personC() {
+  PttA.classList.remove("active");
+  PtcA.classList.remove("active");
+  PttB.classList.remove("active");
+  PtcB.classList.remove("active");
+  PttC.classList.add("active");
+  PtcC.classList.add("active");
+  PgA.style.display = "none";
+  PgB.style.display = "none";
+  PgC.style.display = "flex";
 }
 
 // clippy toggle

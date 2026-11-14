@@ -56,13 +56,13 @@
 			</button>
 		</div>
 
-		<div id="dsdmt" class="closed">
+		<div id="dsdmt" class="open">
 			<div id="window" class="window-dsdmt draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
 						Die Schule der magischen Tiere
 					</p>
-					<div>
+					<div class="header-button-div">
 						<button onclick="minimizeDsdmt()">
 							<img src="../assets/images/portfolio/icon_minimize.png" class="header-button">
 						</button>
@@ -86,24 +86,24 @@
 					<div class="content-area">	
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title active" id="tasktitle-a" onclick="toggleA()">
+								<div class="task-box-title active" id="dsdmt-tasktitle-a" onclick="dsdmtA()">
 									Books 1-4 & 16
 								</div>
-								<div class="task-box-content active" id="taskcont-a">
+								<div class="task-box-content active" id="dsdmt-taskcont-a">
 									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations. I also helped out with the rough sketches of more complex illustrations.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
+								<div class="task-box-title" id="dsdmt-tasktitle-b" onclick="dsdmtB()">
 									Books 5-10 & 17
 								</div>
-								<div class="task-box-content" id="taskcont-b">
+								<div class="task-box-content" id="dsdmt-taskcont-b">
 									I took on more responsibilities and was now in charge of the fully colored double-page spread on the pastedown, in addition to more complex illustrations inside the text, which I was now rendering myself from start to finish.
 								</div>
 							</div>
 						</div>
 						<div class="gallery-area">
-							<div class="gallery" id="gallery-a" style="display: flex;">
+							<div class="gallery" id="dsdmt-gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-dsdmt-a" data-caption="Ida / Rabatt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
@@ -153,7 +153,7 @@
 									Vorsatzskizzen
 								</div>
 							</div>	
-							<div class="gallery" id="gallery-b" style="display: none;">
+							<div class="gallery" id="dsdmt-gallery-b" style="display: none;">
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-dsdmt-b" data-caption="Diverse Tiere" href="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
@@ -209,7 +209,7 @@
 			</div>
 		</div>
 
-		<div id="titk" class="open">
+		<div id="titk" class="closed">
 			<div id="window" class="window-titk draggable resizable">
 				<div id="window-title" class="handle">
 					<p>
@@ -242,32 +242,32 @@
 					<div class="content-area">
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title active" id="tasktitle-a" onclick="toggleA()">
+								<div class="task-box-title active" id="titk-tasktitle-a" onclick="titkA()">
 									Character design
 								</div>
-								<div class="task-box-content active" id="taskcont-a">
+								<div class="task-box-content active" id="titk-taskcont-a">
 									Character sheets and development. I focused mostly on the side characters.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
+								<div class="task-box-title" id="titk-tasktitle-b" onclick="titkB()">
 									Prop design
 								</div>
-								<div class="task-box-content" id="taskcont-b">
+								<div class="task-box-content" id="titk-taskcont-b">
 									I designed a couple props for the film, notably almost all the "Tender" profiles.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" id="tasktitle-c" onclick="toggleC()">
+								<div class="task-box-title" id="titk-tasktitle-c" onclick="titkC()">
 									Storyboards
 								</div>
-								<div class="task-box-content" id="taskcont-c">
+								<div class="task-box-content" id="titk-taskcont-c">
 									Some early storyboard development in Procreate. I quickly switched to Storyboard Pro for efficiency.
 								</div>
 							</div>
 						</div>
 						<div class="gallery-area">
-							<div class="gallery" id="gallery-a" style="display: flex;">
+							<div class="gallery" id="titk-gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-titk-a" href="../assets/images/portfolio/titk/medusa.png">
@@ -309,7 +309,7 @@
 									The Bartender
 								</div>
 							</div>
-							<div class="gallery" id="gallery-b" style="display: none;"> 
+							<div class="gallery" id="titk-gallery-b" style="display: none;"> 
 								<div>
 									<div class="portfolio-image">
 										<a data-fancybox="gallery-titk-b" href="../assets/images/portfolio/titk/Ariella.png">
@@ -343,10 +343,10 @@
 									<a href="https://www.imdb.com/title/tt33513255/?ref_=nm_knf_c_1" target="_blank"> Askeladden's princess</a>
 								</div>
 							</div>
-							<div class="gallery" id="gallery-c" style="display: none;"> 
+							<div class="gallery" id="titk-gallery-c" style="display: none;"> 
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/Ariella.png">
+										<a data-fancybox="gallery-titk-c" href="../assets/images/portfolio/titk/Ariella.png">
 											<img src="../assets/images/portfolio/titk/Ariella.png" />
 										</a>
 									</div>
@@ -354,7 +354,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/Briar.png">
+										<a data-fancybox="gallery-titk-c" href="../assets/images/portfolio/titk/Briar.png">
 											<img src="../assets/images/portfolio/titk/Briar.png" />
 										</a>
 									</div>
@@ -362,7 +362,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/Snow.png">
+										<a data-fancybox="gallery-titk-c" href="../assets/images/portfolio/titk/Snow.png">
 											<img src="../assets/images/portfolio/titk/Snow.png" />
 										</a>
 									</div>
@@ -370,7 +370,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-titk" href="../assets/images/portfolio/titk/Solfrid.png">
+										<a data-fancybox="gallery-titk-c" href="../assets/images/portfolio/titk/Solfrid.png">
 											<img src="../assets/images/portfolio/titk/Solfrid.png" />
 										</a>
 									</div>
@@ -473,30 +473,38 @@
 							Miscellaneous selection from my sketchbook, iPad and croquis sessions.
 						</article>
 					</div>
-					<div class="content-area">
+					<div class="content-area">	
 						<div class="sidebar">
 							<div class="task-box">
-								<div class="task-box-title-active" id="tasktitle-a" onclick="toggleA()">
-									Books 1-4 & 16
+								<div class="task-box-title active" id="person-tasktitle-a" onclick="personA()">
+									Digital art
 								</div>
-								<div class="task-box-content-active" id="taskcont-a">
-									I started by only doing the lineart on small vignettes and gradually moved to more complex and fully rendered illustrations. I also helped out with the rough sketches of more complex illustrations.
+								<div class="task-box-content active" id="person-taskcont-a">
+									Some of my artworks I am most proud of. Mostly drawn on my iPad using Procreate.
 								</div>
 							</div>
 							<div class="task-box">
-								<div class="task-box-title" id="tasktitle-b" onclick="toggleB()">
-									Books 5-10
+								<div class="task-box-title" id="person-tasktitle-b" onclick="personB()">
+									Sketchbook
 								</div>
-								<div class="task-box-content" id="taskcont-b">
-									I took on more responsibilities and was now in charge of the fully colored double-page spread on the pastedown, in addition to more complex illustrations inside the text, which I was now rendering myself from start to finish.
+								<div class="task-box-content" id="person-taskcont-b">
+									Best of selection from my various sketchbooks.
+								</div>
+							</div>
+							<div class="task-box">
+								<div class="task-box-title" id="person-tasktitle-c" onclick="personC()">
+									Croquis
+								</div>
+								<div class="task-box-content" id="person-taskcont-c">
+									A selection of differently timed poses I drew during school and in my free time.
 								</div>
 							</div>
 						</div>
 						<div class="gallery-area">
-							<div class="gallery" id="gallery-a" style="display: flex;">
+							<div class="gallery" id="person-gallery-a" style="display: flex;">
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Ida / Rabatt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Ida / Rabatt" href="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Ida_Rabatt.jpg">
 										</a>
 									</div>
@@ -504,7 +512,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Rabatt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Rabatt" href="../assets/images/portfolio/dsdmt/Rabatt.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Rabatt.jpg">
 										</a>
 									</div>
@@ -512,7 +520,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Henrietta" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Henrietta" href="../assets/images/portfolio/dsdmt/Henrietta.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Henrietta.jpg">
 										</a>
 									</div>
@@ -520,7 +528,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Karajan" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Karajan" href="../assets/images/portfolio/dsdmt/Karajan.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Karajan.jpg">
 										</a>
 									</div>
@@ -528,7 +536,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Bus.jpg">
 										</a>
 									</div>
@@ -536,17 +544,17 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatzskizzen" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
+										<a data-fancybox="gallery-person-a" data-caption="Vorsatzskizzen" href="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Vorsatz.jpg">
 										</a>
 									</div>
 									Vorsatzskizzen
 								</div>
 							</div>	
-							<div class="gallery" id="gallery-b" style="display: none;">
+							<div class="gallery" id="person-gallery-b" style="display: none;">
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Tiere" href="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Diverse Tiere" href="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Diverse_Tiere_2.jpg">
 										</a>
 									</div>
@@ -554,7 +562,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Menschen" href="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Diverse Menschen" href="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Diverse_Menschen.jpg">
 										</a>
 									</div>
@@ -562,7 +570,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Diverse Vignetten" href="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Diverse Vignetten" href="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Diverse_Vignetten.jpg">
 										</a>
 									</div>
@@ -570,7 +578,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus_2.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Der magische Bus" href="../assets/images/portfolio/dsdmt/Bus_2.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Bus_2.jpg">
 										</a>
 									</div>
@@ -578,7 +586,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 8" href="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Vorsatz Band 8" href="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Vorsatz_1.jpg">
 										</a>
 									</div>
@@ -586,7 +594,7 @@
 								</div>
 								<div>
 									<div class="portfolio-image">
-										<a data-fancybox="gallery-dsdmt" data-caption="Vorsatz Band 10" href="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
+										<a data-fancybox="gallery-person-b" data-caption="Vorsatz Band 10" href="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
 											<img src="../assets/images/portfolio/dsdmt/Vorsatz_2.jpg">
 										</a>
 									</div>
@@ -978,7 +986,7 @@
 		</div>
 
 		<div id="clippy">
-			<div id="bubble-default" class="speech-bubble open">
+			<div id="bubble-default" class="speech-bubble closed">
 				<article>
 					Looks like you're viewing Dani's portfolio!
 					<br>
@@ -1018,7 +1026,7 @@
 		</div>
 		<div class="taskbar">
 			<button onclick="toggleDsdmt()" id="dsdmt-tab" class="taskbar-tab">
-				<img src="../assets/icons/23.ico">Die Schule der magischen Tiere
+				<img src="../assets/icons/23.ico"><p>Die Schule der magischen Tiere</p>
 			</button>
 			<button onclick="toggleTitk()" id="titk-tab" class="taskbar-tab">
 				<img src="../assets/icons/23.ico">Tender is the Knight

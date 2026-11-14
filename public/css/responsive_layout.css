@@ -3,6 +3,7 @@
 }
 
 @media (max-width: 767px) /* phone */ {
+
     main {
         height: 100vh;
         overflow-y: hidden;
@@ -13,6 +14,58 @@
         padding: 1em;
         gap: 10px;
     }
+
+	#window {
+		min-width: 300px;
+		width: 300px;
+		min-height: 320px;
+	}
+
+	.header-button-div {
+		display: flex;
+		gap: 2px;
+	}
+
+	.header-button {
+		height: 16px;
+	}
+
+	#content {
+		overflow-y: scroll;
+	}
+
+	.description {
+		font-size: 10pt;
+	}
+
+	.title {
+		font-size: 18pt;
+	}
+
+	.content-area {
+		flex-flow: column wrap;
+	}
+
+	.gallery-area {
+		overflow-y: hidden;
+	}
+
+	.sidebar {
+		flex: 0 0 0;
+	}
+
+	.task-box-content {
+		display: none;
+	}
+
+	.task-box-content.active {
+		display: flex;
+	}
+
+	.portfolio-image {
+		height: 100px;
+		width: 100px;
+	}
 
 	#window-small {
 		left: 10%;
@@ -32,7 +85,7 @@
 	}
 
     #clippy img {
-        height: 50px;
+        height: 75px;
     }
 
     .speech-bubble {
@@ -40,7 +93,8 @@
         bottom: 120px;
     }
 
-	.taskbar-tab {
+	.taskbar-tab p {
 		display: none;
 	}
+	
 }

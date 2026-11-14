@@ -33,7 +33,7 @@ article {
     width: 90px;
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
+    align-items: center;
 }
 
 .unclicked:hover {
@@ -44,6 +44,10 @@ article {
 .clicked {
     border: 1px solid rgb(131, 166, 252);
     background-color: rgba(183, 211, 252, 0.518);
+}
+
+.desktop-icons .clicked p {
+    overflow: visible;
 }
 
 .clicked:hover {
@@ -57,14 +61,16 @@ article {
 }
 
 .desktop-icons p {
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 3px black;
     font-family: 'Tahoma';
     font-size: 10pt;
-    max-width: 50px;
+    max-width: 90%;
     max-height: 2rem;
-    overflow: hidden;
-    align-self: center;
+    align-content: center;
+    text-align: center;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .open {
@@ -173,6 +179,7 @@ article {
 
 .content-area {
     display: flex;
+    flex-grow: 1;
     overflow: hidden;
 }
 
@@ -183,9 +190,6 @@ article {
     flex-direction: column;
     padding: 0.6em;
     gap: 0.6em;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
 }
 
 .task-box-title {
@@ -237,6 +241,7 @@ article {
 
 .gallery-area {
     overflow-y: scroll;
+    flex-grow: 1;
 }
 
 .gallery {
