@@ -462,6 +462,7 @@ article {
 
 #clippy img {
     height: 150px;
+    cursor: pointer;
 }
 
 .speech-bubble {
@@ -512,6 +513,7 @@ article {
 	border-right: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
+    filter: drop-shadow(2px 2px);
 }
 
 footer {

@@ -351,6 +351,12 @@ function minimizeContact() {
   contactT.classList.remove("pressed");
 }
 
+// maximize
+
+function maximizeDsdmt() {
+
+}
+
 // drag
 
 interact('.draggable')
@@ -379,6 +385,7 @@ function dragMoveListener (event) {
   target.setAttribute('data-x', x)
   target.setAttribute('data-y', y)
   target.classList.remove("fullscreen")
+
 }
 
 window.dragMoveListener = dragMoveListener
@@ -413,25 +420,41 @@ interact('.resizable')
 const galleryA = document.getElementById("gallery-a")
 const galleryB = document.getElementById("gallery-b")
 const galleryC = document.getElementById("gallery-c")
+const ttitleA = document.getElementById("tasktitle-a")
+const ttitleB = document.getElementById("tasktitle-b")
+const ttitleC = document.getElementById("tasktitle-c")
+const tcontA = document.getElementById("taskcont-a")
+const tcontB = document.getElementById("taskcont-b")
+const tcontC = document.getElementById("taskcont-c")
 
 function toggleA() {
   galleryA.style.display = "flex";
   galleryB.style.display = "none";
-  galleryC.style.display = "none";
-  var element = document.getElementById("tasktitle-a");
-  element.classList.toggle("active");
+  ttitleA.classList.add("active");
+  ttitleB.classList.remove("active");
+  tcontA.classList.add("active");
+  tcontB.classList.remove("active");
 }
 
 function toggleB() {
-  galleryB.style.display = "flex";
   galleryA.style.display = "none";
-  galleryC.style.display = "none";
+  galleryB.style.display = "flex";
+  ttitleA.classList.remove("active");
+  ttitleB.classList.add("active");
+  tcontA.classList.remove("active");
+  tcontB.classList.add("active");
 }
 
 function toggleC() {
-  galleryC.style.display = "flex";
   galleryA.style.display = "none";
   galleryB.style.display = "none";
+  galleryC.style.display = "flex";
+  ttitleA.classList.remove("active");
+  ttitleB.classList.remove("active");
+  ttitleC.classList.add("active");
+  tcontA.classList.remove("active");
+  tcontB.classList.remove("active");
+  tcontC.classList.add("active");
 }
 
 // clippy toggle
