@@ -1,14 +1,46 @@
-@media (max-width: 1023) /* tablet */ {
-    
+@media (max-width: 1087px) /* tablet */ {
+
+	#window, #window-small {
+		min-width: 600px;
+		width: 700px;
+		min-height: 550px;
+		height: 500px;
+		bottom: 50%;
+	}
+
+    #clippy img {
+        height: 75px;
+    }
+
+    .speech-bubble {
+        right: 10px;
+        bottom: 150px;
+    }
+
+	.portfolio-image {
+		height: 150px;
+		width: 150px;
+	}
+
+	.portfolio-image img {
+		max-height: 148px;
+		max-width: 148px;
+	}
+
+	.taskbar-tab {
+		max-height: 34px;
+	}
+
+	.taskbar-tab p {
+		max-width: 50px;
+		max-height: 1em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 }
 
-@media (max-width: 767px) /* phone */ {
-
-    main {
-        height: 100vh;
-        overflow-y: hidden;
-		overflow-x: hidden;
-    }
+@media (max-width: 825px) /* phone */ {
 
     .desktop-icons {
         padding: 1em;
@@ -101,7 +133,8 @@
 	}
 
 	.portfolio-image img {
-		max-height: 240px;
+		max-height: 248px;
+		max-width: 248px;
 	}
 
 	#start-window {
@@ -113,17 +146,13 @@
 		width: 260px;
 	}
 
-	#clippy {
-		cursor: pointer;
-	}
-
     #clippy img {
         height: 75px;
     }
 
     .speech-bubble {
-        right: 5px;
-        bottom: 120px;
+        right: 10px;
+        bottom: 150px;
     }
 
 	.taskbar-tab p {

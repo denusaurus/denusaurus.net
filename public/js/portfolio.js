@@ -104,11 +104,11 @@ const dsdmtT = document.getElementById("dsdmt-tab")
 
 function toggleDsdmt() {
 
-  if (dsdmt.className == "closed") {
-    dsdmt.className = "open";
+  if (dsdmt.className == "closed window") {
+    dsdmt.className = "open window";
     dsdmtT.classList.add("pressed");
   } else {
-    dsdmt.className = "closed";
+    dsdmt.className = "closed window";
     dsdmtT.classList.remove("pressed");
   }
 }
@@ -117,11 +117,11 @@ const titkT = document.getElementById("titk-tab")
 
 function toggleTitk() {
 
-  if (titk.className == "closed") {
-    titk.className = "open";
+  if (titk.className == "closed window") {
+    titk.className = "open window";
     titkT.classList.add("pressed");
   } else {
-    titk.className = "closed";
+    titk.className = "closed window";
     titkT.classList.remove("pressed");
   }
 }
@@ -130,11 +130,11 @@ const charaT = document.getElementById("chara-tab")
 
 function toggleChara() {
 
-  if (chara.className == "closed") {
-    chara.className = "open";
+  if (chara.className == "closed window") {
+    chara.className = "open window";
     charaT.classList.add("pressed");
   } else {
-    chara.className = "closed";
+    chara.className = "closed window";
     charaT.classList.remove("pressed");
   }
 }
@@ -143,11 +143,11 @@ const personT = document.getElementById("person-tab")
 
 function togglePerson() {
 
-  if (person.className == "closed") {
-    person.className = "open";
+  if (person.className == "closed window") {
+    person.className = "open window";
     personT.classList.add("pressed");
   } else {
-    person.className = "closed";
+    person.className = "closed window";
     personT.classList.remove("pressed");
   }
 }
@@ -156,11 +156,11 @@ const aboutT = document.getElementById("about-tab")
 
 function toggleAbout() {
 
-  if (about.className == "closed") {
-    about.className = "open";
+  if (about.className == "closed window") {
+    about.className = "open window";
     aboutT.classList.add("pressed");
   } else {
-    about.className = "closed";
+    about.className = "closed window";
     aboutT.classList.remove("pressed");
   }
 }
@@ -169,11 +169,11 @@ const cvT = document.getElementById("cv-tab")
 
 function toggleCv() {
 
-  if (cv.className == "closed") {
-    cv.className = "open";
+  if (cv.className == "closed window") {
+    cv.className = "open window";
     cvT.classList.add("pressed");
   } else {
-    cv.className = "closed";
+    cv.className = "closed window";
     cvT.classList.remove("pressed");
   }
 }
@@ -182,11 +182,11 @@ const contactT = document.getElementById("contact-tab")
 
 function toggleContact() {
 
-  if (contact.className == "closed") {
-    contact.className = "open";
+  if (contact.className == "closed window") {
+    contact.className = "open window";
     contactT.classList.add("pressed");
   } else {
-    contact.className = "closed";
+    contact.className = "closed window";
     contactT.classList.remove("pressed");
   }
 }
@@ -196,63 +196,63 @@ function toggleContact() {
 const dsdmt = document.getElementById("dsdmt")
 
 function openDsdmt() {
-  dsdmt.className = "open";
+  dsdmt.className = "open window";
   dsdmtF.className = "unclicked";
   dsdmtT.style.display = "flex";
   dsdmtT.classList.add("pressed");
 }
 
 function closeDsdmt() {
-  dsdmt.className = "closed";
+  dsdmt.className = "closed window";
   dsdmtT.style.display = "none";
 }
 
 const titk = document.getElementById("titk")
 
 function openTitk() {
-  titk.className = "open";
+  titk.className = "open window";
   titkF.className = "unclicked";
   titkT.style.display = "flex";
   titkT.classList.add("pressed");
 }
 
 function closeTitk() {
-  titk.className = "closed";
+  titk.className = "closed window";
   titkT.style.display = "none";
 }
 
 const chara = document.getElementById("chara")
 
 function openChara() {
-  chara.className = "open";
+  chara.className = "open window";
   charaF.className = "unclicked";
   charaT.style.display = "flex";
   charaT.classList.add("pressed");
 }
 
 function closeChara() {
-  chara.className = "closed";
+  chara.className = "closed window";
   charaT.style.display = "none";
 }
 
 const person = document.getElementById("person")
 
 function openPerson() {
-  person.className = "open";
+  person.className = "open window";
   personF.className = "unclicked";
   personT.style.display = "flex";
   personT.classList.add("pressed");
 }
 
 function closePerson() {
-  person.className = "closed";
+  person.className = "closed window";
   personT.style.display = "none";
 }
 
 const about = document.getElementById("about")
 
 function openAbout() {
-  about.className = "open";
+  about.className = "open window";
   aboutT.style.display = "flex";
   aboutT.classList.add("pressed");
 }
@@ -281,16 +281,16 @@ const bubbleContact = document.getElementById("bubble-contact")
 
 function openContact() {
   contact.className = 'open';
-  bubbleDefault.classList.replace("open", "closed");
-  bubbleContact.classList.replace("closed", "open");
+  bubbleDefault.classList.replace("open window", "closed window");
+  bubbleContact.classList.replace("closed window", "open window");
   contactT.style.display = "flex";
   contactT.classList.add("pressed");
 }
 
 function closeContact () {
   contact.className = 'closed';
-  bubbleDefault.classList.replace("closed", "open");
-  bubbleContact.classList.replace("open", "closed");
+  bubbleDefault.classList.replace("closed window", "open window");
+  bubbleContact.classList.replace("open window", "closed window");
   contactT.style.display = "none";
 }
 
@@ -298,7 +298,7 @@ const start = document.getElementById("start-window")
 
 function toggleStart() {
   if (start.className == "closed-start")
-      start.className = "open";
+      start.className = "open window";
   else
       start.className = "closed-start";
 }
@@ -412,8 +412,6 @@ interact('.resizable')
       }
     }
   })
-
-// bring to top
 
 // gallery toggle
   
@@ -577,4 +575,27 @@ var bubbleC = document.getElementById("bubble-contact")
       bubbleC.style.display = "none";
     }
 
+}
+
+// bring to top
+
+function bringtotop(el) {
+  const windows = document.querySelectorAll(".window");
+
+  for(const element of windows) {
+    element.style.zIndex = "1";
+    console.log("set to 1");
+  }
+
+  console.log("now 5");
+  el.style.zIndex = "5";
+
+}
+
+window.onload = function() {
+  const elements = document.querySelectorAll(".window");
+
+  for(const element of elements) {
+    element.addEventListener("click", ()=>{bringtotop(element)});
+  }
 }
